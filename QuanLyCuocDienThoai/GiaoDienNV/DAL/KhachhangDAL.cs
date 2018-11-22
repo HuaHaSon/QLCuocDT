@@ -9,14 +9,14 @@ namespace GiaoDienNV.DAL
 {
     public class KhachhangDAL
     {
-        //QLCuocDT db = null;
-        //public KhachhangDAL()
-        //{
-        //    db = new QLCuocDT();
-        //}
-        //public List<KhachHang> Load()
-        //{
-        //    return db.KhachHangs.Where(s => s.Flag == true).ToList();
-        //}
+        QLCuocDTContext db = null;
+        public KhachhangDAL()
+        {
+            db = new QLCuocDTContext();
+        }
+        public List<KhachHang> Load()
+        {
+            return db.KhachHangs.Where(s => s.Flag == true).ToList();
+        }
     }
 }

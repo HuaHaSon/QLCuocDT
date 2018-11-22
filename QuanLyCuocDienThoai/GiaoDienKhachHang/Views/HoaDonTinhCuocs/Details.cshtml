@@ -1,0 +1,74 @@
+﻿@model Model.EFModel.HoaDonTinhCuoc
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HoaDonTinhCuoc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KhachHang.TenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang.TenKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SIM.TenSim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SIM.TenSim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayHD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CuocThueBao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CuocThueBao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThanhTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThanhTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TongTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TongTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flag)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HoaDonTinhCuocID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

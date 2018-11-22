@@ -19,7 +19,7 @@ namespace Model.EFModel
         public int KhachHangID { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(100)]
         public string TenKH { get; set; }
 
         [Required]
