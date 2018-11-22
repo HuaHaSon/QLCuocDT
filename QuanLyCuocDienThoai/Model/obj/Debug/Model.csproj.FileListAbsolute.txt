@@ -1,0 +1,24 @@
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\bin\Debug\Model.dll.config
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\bin\Debug\Model.dll
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\bin\Debug\Model.pdb
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.dll
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.xml
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\obj\Debug\Model.csproj.CopyComplete
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\obj\Debug\Model.dll
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\Model\obj\Debug\Model.pdb
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\bin\Debug\Model.dll.config
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\bin\Debug\Model.dll
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\bin\Debug\Model.pdb
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.dll
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.xml
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\obj\Debug\Model.csprojAssemblyReference.cache
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\obj\Debug\Model.csproj.CopyComplete
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\obj\Debug\Model.dll
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\Model\obj\Debug\Model.pdb

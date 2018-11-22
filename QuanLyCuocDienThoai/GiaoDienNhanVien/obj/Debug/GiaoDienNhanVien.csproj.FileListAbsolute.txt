@@ -1,0 +1,48 @@
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\GiaoDienNhanVien.exe.config
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\GiaoDienNhanVien.exe
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\GiaoDienNhanVien.pdb
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\EntityFramework.dll
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\Model.dll
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\Model.pdb
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\Model.dll.config
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\EntityFramework.xml
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.csprojAssemblyReference.cache
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\MainWindow.g.cs
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\App.g.cs
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien_MarkupCompile.cache
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien_MarkupCompile.lref
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\MainWindow.baml
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.g.resources
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.Properties.Resources.resources
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.csproj.GenerateResource.cache
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.csproj.CoreCompileInputs.cache
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.csproj.CopyComplete
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.exe
+D:\Projects\QLCuocDT_ThayThanh\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.pdb
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\GiaoDienNhanVien.exe.config
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\GiaoDienNhanVien.exe
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\GiaoDienNhanVien.pdb
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\EntityFramework.dll
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\EntityFramework.SqlServer.dll
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\Model.dll
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\Model.pdb
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\Model.dll.config
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\EntityFramework.xml
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\bin\Debug\EntityFramework.SqlServer.xml
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.csprojAssemblyReference.cache
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\MainWindow.g.cs
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\App.g.cs
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien_MarkupCompile.cache
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien_MarkupCompile.lref
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\MainWindow.baml
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.g.resources
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.GUI.KhachHang.resources
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.GUI.Main.resources
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.Properties.Resources.resources
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.csproj.GenerateResource.cache
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.csproj.CoreCompileInputs.cache
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.csproj.CopyComplete
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.exe
+E:\Tai lieu CNTT\QLCuocDT_ThayThanh-master\QLCuocDT_ThayThanh-master\QuanLyCuocDienThoai\GiaoDienNhanVien\obj\Debug\GiaoDienNhanVien.pdb
