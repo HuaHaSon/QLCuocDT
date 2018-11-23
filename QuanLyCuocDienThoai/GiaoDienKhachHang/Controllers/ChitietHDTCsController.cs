@@ -16,7 +16,13 @@ namespace GiaoDienKhachHang.Controllers
 
         public ActionResult Index(int id)
         {
-            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id );
+            DateTime now = DateTime.Now;
+            ViewBag.MonthNow = now.Month;
+            
+            var startDate = new DateTime(now.Year, now.Month,1);
+            var endDate = startDate.AddMonths(1).AddDays(-1);
+            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.NgayHD >= startDate & m.NgayHD <= endDate);
+
             return View(chitietHDTCs.ToList());
         }
 

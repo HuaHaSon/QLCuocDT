@@ -33,11 +33,12 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Data Table</strong>
-                        @using (Html.BeginForm())
+                        <strong class="card-title">Chi tiết hóa đơn tháng @ViewBag.MonthNow</strong>
+                        @using (Html.BeginForm("Index", "ChitietHDTCs", FormMethod.Post, new { style = "Float:right" }))
                         {
                             <label>Tháng: </label>
-                            <select id="thang" name="thang">
+                            <select id="thang" name="thang" onchange='if(this.value != 0) { this.form.submit(); }'>
+                                <option value="0">Chọn tháng</option>
                                 <option value="1">Thang 1</option>
                                 <option value="2">Thang 2</option>
                                 <option value="3">Thang 3</option>
@@ -51,7 +52,6 @@
                                 <option value="11">Thang 11</option>
                                 <option value="12">Thang 12</option>
                             </select>
-                            <button type="submit">Tim</button>
                         }
 
                     </div>

@@ -18,7 +18,6 @@ namespace Model.EFModel
         public virtual DbSet<HoaDonTinhCuoc> HoaDonTinhCuocs { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<SIM> SIMs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

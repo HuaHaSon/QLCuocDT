@@ -40,15 +40,15 @@ namespace GiaoDienKhachHang.Controllers
                 }
                 else if (result == 0)
                 {
-                    ModelState.AddModelError("", "Tài khoản bị khóa.");
+                    ModelState.AddModelError("", "Người dùng bị khóa.");
                 }
                 else if (result == -1)
                 {
-                    ModelState.AddModelError("", "Tài khoản không tồn tại.");
+                    ModelState.AddModelError("", "Người dùng không tồn tại.");
                 }
                 else if (result == -2)
                 {
-                    ModelState.AddModelError("", "Mật khẩu không đúng.");
+                    ModelState.AddModelError("", "Số CMND không đúng.");
                 }
             }
             return View(model);
