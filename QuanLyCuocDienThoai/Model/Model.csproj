@@ -57,6 +57,7 @@
     <Compile Include="EFModel\KhachHang.cs" />
     <Compile Include="EFModel\QLCuocDTContext.cs" />
     <Compile Include="EFModel\SIM.cs" />
+    <Compile Include="EFModel\sysdiagram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

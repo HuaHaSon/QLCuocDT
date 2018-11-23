@@ -1,0 +1,136 @@
+﻿@model IEnumerable<Model.EFModel.ChitietHDTC>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="/Assets/sufee-admin-dashboard-master/#">Dashboard</a></li>
+                    <li><a href="/Assets/sufee-admin-dashboard-master/#">Table</a></li>
+                    <li class="active">Data table</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Data Table</strong>
+                    </div>
+                    <div class="card-body">
+                        <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.SIM.HoaDonDangKies)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.SIM.TenSim)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.NgayHD)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.SoPhutSD)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SIM.HoaDonDangKies)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SIM.SoSim)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SIM.TenSim)
+                                    </td>
+                                    <td>
+                                        @item.NgayHD.Date.ToString("dd/MM/yyyy")
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SoPhutSD)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Details", "Details", new { id = item.ChitietHDTCID })
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div><!-- .animated -->
+</div><!-- .content -->
+
+
+
+@section PluginCSS{
+    <link rel="apple-touch-icon" href="/Assets/sufee-admin-dashboard-master/apple-icon.png">
+    <link rel="shortcut icon" href="/Assets/sufee-admin-dashboard-master/favicon.ico">
+
+    <link rel="stylesheet" href="/Assets/sufee-admin-dashboard-master/assets/css/normalize.css">
+    <link rel="stylesheet" href="/Assets/sufee-admin-dashboard-master/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Assets/sufee-admin-dashboard-master/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Assets/sufee-admin-dashboard-master/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/Assets/sufee-admin-dashboard-master/assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/Assets/sufee-admin-dashboard-master/assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="/Assets/sufee-admin-dashboard-master/assets/css/lib/datatable/dataTables.bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="/Assets/sufee-admin-dashboard-master/assets/css/bootstrap-select.less"> -->
+    <link rel="stylesheet" href="/Assets/sufee-admin-dashboard-master/assets/scss/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+}
+@section PluginJS{
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/popper.min.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/plugins.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/main.js"></script>
+
+
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/lib/data-table/datatables.min.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/lib/data-table/jszip.min.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/lib/data-table/pdfmake.min.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/lib/data-table/vfs_fonts.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/lib/data-table/buttons.html5.min.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/lib/data-table/buttons.print.min.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/lib/data-table/buttons.colVis.min.js"></script>
+    <script src="/Assets/sufee-admin-dashboard-master/assets/js/lib/data-table/datatables-init.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#bootstrap-data-table-export').DataTable();
+        });
+    </script>
+}
+
