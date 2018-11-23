@@ -14,10 +14,20 @@ namespace GiaoDienKhachHang.Controllers
     {
         private QLCuocDTContext db = new QLCuocDTContext();
 
-        // GET: ChitietHDTCs
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.SIM.HoaDonDangKies);
+            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id );
+            return View(chitietHDTCs.ToList());
+        }
+
+
+        [HttpPost]
+        public ActionResult Index(int id, int? thang)
+        {
+            DateTime now = DateTime.Now;
+            var startDate = new DateTime(now.Year, thang.GetValueOrDefault(1), 1);
+            var endDate = startDate.AddMonths(1).AddDays(-1);
+            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.SIM).Where(m=>m.SIM.HoaDonDangKy.KhachHangID== id&m.NgayHD>=startDate&m.NgayHD<=endDate);
             return View(chitietHDTCs.ToList());
         }
 

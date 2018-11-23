@@ -46,3 +46,26 @@ E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDie
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.csproj.CopyComplete
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.exe
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.pdb
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\bin\Debug\GiaoDienNV.exe.config
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\bin\Debug\GiaoDienNV.exe
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\bin\Debug\GiaoDienNV.pdb
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\bin\Debug\EntityFramework.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\bin\Debug\Model.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\bin\Debug\Model.pdb
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\bin\Debug\Model.dll.config
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\bin\Debug\EntityFramework.xml
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.csprojAssemblyReference.cache
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.GUI.DangKySIM.resources
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.GUI.HoaDonTC.resources
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.GUI.Main.resources
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.GUI.SIM.resources
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.GUI.ThongTinKH.resources
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.GUI.ThongTinSIM.resources
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.Properties.Resources.resources
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.csproj.GenerateResource.cache
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.csproj.CoreCompileInputs.cache
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.csproj.CopyComplete
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.exe
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienNV\obj\Debug\GiaoDienNV.pdb

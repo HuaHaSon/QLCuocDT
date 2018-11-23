@@ -13,7 +13,6 @@ namespace Model.EFModel
         public SIM()
         {
             ChitietHDTCs = new HashSet<ChitietHDTC>();
-            HoaDonDangKies = new HashSet<HoaDonDangKy>();
             HoaDonTinhCuocs = new HashSet<HoaDonTinhCuoc>();
         }
 
@@ -27,13 +26,14 @@ namespace Model.EFModel
         [StringLength(20)]
         public string SoSim { get; set; }
 
+        public int HoaDonDangKyID { get; set; }
+
         public bool Flag { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChitietHDTC> ChitietHDTCs { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDonDangKy> HoaDonDangKies { get; set; }
+        public virtual HoaDonDangKy HoaDonDangKy { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDonTinhCuoc> HoaDonTinhCuocs { get; set; }

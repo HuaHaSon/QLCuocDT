@@ -9,11 +9,15 @@ namespace Model.EFModel
     [Table("HoaDonDangKy")]
     public partial class HoaDonDangKy
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HoaDonDangKy()
+        {
+            SIMs = new HashSet<SIM>();
+        }
+
         public int HoaDonDangKyID { get; set; }
 
         public int KhachHangID { get; set; }
-
-        public int SIMID { get; set; }
 
         public DateTime NgayDK { get; set; }
 
@@ -25,6 +29,7 @@ namespace Model.EFModel
 
         public virtual KhachHang KhachHang { get; set; }
 
-        public virtual SIM SIM { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SIM> SIMs { get; set; }
     }
 }

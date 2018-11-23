@@ -34,13 +34,37 @@
                 <div class="card">
                     <div class="card-header">
                         <strong class="card-title">Data Table</strong>
+                        @using (Html.BeginForm())
+                        {
+                            <label>Tháng: </label>
+                            <select id="thang" name="thang">
+                                <option value="1">Thang 1</option>
+                                <option value="2">Thang 2</option>
+                                <option value="3">Thang 3</option>
+                                <option value="4">Thang 4</option>
+                                <option value="5">Thang 5</option>
+                                <option value="6">Thang 6</option>
+                                <option value="7">Thang 7</option>
+                                <option value="8">Thang 8</option>
+                                <option value="9">Thang 9</option>
+                                <option value="10">Thang 10</option>
+                                <option value="11">Thang 11</option>
+                                <option value="12">Thang 12</option>
+                            </select>
+                            <button type="submit">Tim</button>
+                        }
+
                     </div>
                     <div class="card-body">
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
+
                             <thead>
                                 <tr>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.SIM.HoaDonDangKies)
+                                        @Html.DisplayNameFor(model => model.SIM.HoaDonDangKy.KhachHang.TenKH)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.SIM.SoSim)
                                     </th>
                                     <th>
                                         @Html.DisplayNameFor(model => model.SIM.TenSim)
@@ -57,26 +81,26 @@
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.SIM.HoaDonDangKies)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.SIM.SoSim)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.SIM.TenSim)
-                                    </td>
-                                    <td>
-                                        @item.NgayHD.Date.ToString("dd/MM/yyyy")
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.SoPhutSD)
-                                    </td>
-                                    <td>
-                                        @Html.ActionLink("Details", "Details", new { id = item.ChitietHDTCID })
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SIM.HoaDonDangKy.KhachHang.TenKH)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SIM.SoSim)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SIM.TenSim)
+                                        </td>
+                                        <td>
+                                            @item.NgayHD.Date.ToString("dd/MM/yyyy")
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SoPhutSD)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Details", "Details", new { id = item.ChitietHDTCID })
+                                        </td>
+                                    </tr>
                                 }
                             </tbody>
                         </table>

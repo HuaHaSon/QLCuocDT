@@ -14,8 +14,8 @@ namespace GiaoDienKhachHang.Controllers
     {
         private QLCuocDTContext db = new QLCuocDTContext();
 
-        // GET: HoaDonTinhCuocs
-        public ActionResult Index()
+        // GET: HoaDonTinhCuocsint id
+        public ActionResult Index(int ?thang)
         {
             var hoaDonTinhCuocs = db.HoaDonTinhCuocs.Include(h => h.KhachHang).Include(h => h.SIM);
             return View(hoaDonTinhCuocs.ToList());

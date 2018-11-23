@@ -18,16 +18,9 @@ namespace GiaoDienNV.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-                panelmain.Controls.Clear();
-                Khachhang kh = new Khachhang();
-                kh.TopLevel = false;
-                kh.AutoScroll = true;
-                panelmain.Controls.Add(kh);
-                kh.Show();
-                    
-
-           
             
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)

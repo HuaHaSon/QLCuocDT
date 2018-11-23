@@ -1,4 +1,8 @@
-﻿using System;
+﻿
+using Model.Bus;
+using Model.EFModel;
+using Model.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,23 +12,47 @@ namespace GiaoDienKhachHang.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public QLCuocDTContext db = new QLCuocDTContext();
+        // GET: Home
+        public ActionResult Login()
         {
             return View();
         }
 
-        public ActionResult About()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(LoginModel model)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            if (ModelState.IsValid)
+            {
+                var dao = new KhachHangBus();
+                var result = dao.Login(model.Email, model.Password);
+                if (result == 1)
+                {
+                    var userSession = new LoginSessionModel();
+                    userSession.UserName = db.KhachHangs.Where(m => m.Email == model.Email).Select(m => m.TenKH).FirstOrDefault();
+                    userSession.Email = model.Email;
+                    int idKH = db.KhachHangs.Where(m => m.Email == model.Email).Select(m=>m.KhachHangID).FirstOrDefault();
+                    Session["USER_SESSION"] = null;
+                    Session.Add("USER_SESSION", userSession);
+                    return RedirectToAction("Index", "ChiTietHDTCs", new { id=idKH});
+                }
+                else if (result == 0)
+                {
+                    ModelState.AddModelError("", "Tài khoản bị khóa.");
+                }
+                else if (result == -1)
+                {
+                    ModelState.AddModelError("", "Tài khoản không tồn tại.");
+                }
+                else if (result == -2)
+                {
+                    ModelState.AddModelError("", "Mật khẩu không đúng.");
+                }
+            }
+            return View(model);
         }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        
     }
 }
