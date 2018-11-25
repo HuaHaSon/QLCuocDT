@@ -35,6 +35,10 @@ namespace Model.EFModel
         public string ChucVu { get; set; }
 
         [Required]
+        [StringLength(200)]
+        public string Email { get; set; }
+
+        [Required]
         [StringLength(100)]
         public string DiaChi { get; set; }
 

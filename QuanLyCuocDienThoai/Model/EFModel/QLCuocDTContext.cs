@@ -29,9 +29,18 @@ namespace Model.EFModel
                 .Property(e => e.GioKT)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<HoaDonDangKy>()
+                .HasMany(e => e.SIMs)
+                .WithRequired(e => e.HoaDonDangKy)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<KhachHang>()
                 .Property(e => e.CMND)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<KhachHang>()
+                .Property(e => e.Email)
+                .IsFixedLength();
 
             modelBuilder.Entity<KhachHang>()
                 .HasMany(e => e.HoaDonDangKies)
@@ -46,11 +55,6 @@ namespace Model.EFModel
             modelBuilder.Entity<SIM>()
                 .Property(e => e.SoSim)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<SIM>()
-                .HasMany(e => e.HoaDonDangKies)
-                .WithRequired(e => e.SIM)
-                .WillCascadeOnDelete(false);
         }
     }
 }

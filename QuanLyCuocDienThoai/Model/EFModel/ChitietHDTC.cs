@@ -13,9 +13,7 @@ namespace Model.EFModel
 
         public int? SIMID { get; set; }
 
-        public DateTime TimeBD { get; set; }
-
-        public DateTime TiemKT { get; set; }
+        public DateTime NgayHD { get; set; }
 
         public int SoPhutSD { get; set; }
 
