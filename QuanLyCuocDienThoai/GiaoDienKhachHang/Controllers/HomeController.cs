@@ -12,7 +12,7 @@ namespace GiaoDienKhachHang.Controllers
 {
     public class HomeController : Controller
     {
-        public QLCuocDTContext db = new QLCuocDTContext();
+        private QLCuocDTContext db = new QLCuocDTContext();
         // GET: Home
         public ActionResult Login()
         {
