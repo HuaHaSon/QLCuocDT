@@ -9,6 +9,12 @@ namespace Model.EFModel
     [Table("HoaDonTinhCuoc")]
     public partial class HoaDonTinhCuoc
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HoaDonTinhCuoc()
+        {
+            ChitietHDTCs = new HashSet<ChitietHDTC>();
+        }
+
         public int HoaDonTinhCuocID { get; set; }
 
         public int KhachHangID { get; set; }
@@ -19,11 +25,14 @@ namespace Model.EFModel
 
         public int CuocThueBao { get; set; }
 
-        public int ThanhTien { get; set; }
+        public decimal ThanhTien { get; set; }
 
-        public int TongTien { get; set; }
+        public decimal TongTien { get; set; }
 
         public bool Flag { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChitietHDTC> ChitietHDTCs { get; set; }
 
         public virtual KhachHang KhachHang { get; set; }
 

@@ -13,11 +13,13 @@ namespace Model.EFModel
         }
 
         public virtual DbSet<ChitietHDTC> ChitietHDTCs { get; set; }
+        public virtual DbSet<FileLogSIM> FileLogSIMs { get; set; }
         public virtual DbSet<GiaCuoc> GiaCuocs { get; set; }
         public virtual DbSet<HoaDonDangKy> HoaDonDangKies { get; set; }
         public virtual DbSet<HoaDonTinhCuoc> HoaDonTinhCuocs { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<SIM> SIMs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -33,6 +35,14 @@ namespace Model.EFModel
                 .HasMany(e => e.SIMs)
                 .WithRequired(e => e.HoaDonDangKy)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<HoaDonTinhCuoc>()
+                .Property(e => e.ThanhTien)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<HoaDonTinhCuoc>()
+                .Property(e => e.TongTien)
+                .HasPrecision(18, 0);
 
             modelBuilder.Entity<KhachHang>()
                 .Property(e => e.CMND)

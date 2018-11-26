@@ -13,12 +13,18 @@ namespace Model.EFModel
 
         public int? SIMID { get; set; }
 
-        public DateTime NgayHD { get; set; }
+        public DateTime? ThoiGianBD { get; set; }
+
+        public DateTime? ThoiGianKT { get; set; }
 
         public int SoPhutSD { get; set; }
+
+        public int? HoaDonTinhCuocID { get; set; }
 
         public bool Flag { get; set; }
 
         public virtual SIM SIM { get; set; }
+
+        public virtual HoaDonTinhCuoc HoaDonTinhCuoc { get; set; }
     }
 }
