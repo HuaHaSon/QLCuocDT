@@ -25,18 +25,25 @@ namespace GiaoDienKhachHang.Controllers
             var endDate = startDate.AddMonths(1).AddDays(-1);
 
 
-            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.HoaDonTinhCuoc).Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.ThoiGianBD>= startDate & m.ThoiGianKT <= endDate);
+            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.HoaDonTinhCuoc).Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.ThoiGianBD>= startDate & m.ThoiGianKT <= endDate).OrderByDescending(m=>m.ThoiGianBD);
+            ViewBag.SIMID = new SelectList(db.SIMs.Where(m=>m.HoaDonDangKy.KhachHangID == id), "SimID", "SoSim");
             return View(chitietHDTCs.ToList());
         }
 
         [HttpPost]
-        public ActionResult Index(int id, int? thang)
+        public ActionResult Index(int id, int? thang,int? SIMID)
         {
+            ViewBag.SIMID = new SelectList(db.SIMs.Where(m => m.HoaDonDangKy.KhachHangID == id), "SimID", "SoSim");
             ViewBag.MonthNow = thang;
             DateTime now = DateTime.Now;
             var startDate = new DateTime(now.Year, thang.GetValueOrDefault(1), 1);
             var endDate = startDate.AddMonths(1).AddDays(-1);
-            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.HoaDonTinhCuoc).Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.ThoiGianBD >= startDate & m.ThoiGianKT <= endDate);
+
+                var chitietHDTCs = db.ChitietHDTCs.Include(c => c.HoaDonTinhCuoc).Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.ThoiGianBD >= startDate & m.ThoiGianKT <= endDate);
+            if(SIMID != null)
+            {
+                chitietHDTCs = chitietHDTCs.Where(m=>m.SIMID== SIMID);
+            }
             decimal tienHoaDonThang = 0;
             foreach(var item in chitietHDTCs)
             {
