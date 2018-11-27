@@ -176,6 +176,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{632db592-5c7f-4e2e-9e6d-038b16bd4cfd}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{f7b95722-5aab-4642-a57a-68240e847e83}</Project>
       <Name>Model</Name>

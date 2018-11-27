@@ -104,21 +104,6 @@ C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Deb
 C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.ThongtinKH.resources
 C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.ThongTinHDDK.resources
 C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.ThongtinSIM.resources
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.csprojAssemblyReference.cache
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.Form1.resources
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.DangKySIM.resources
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.HoaDonTC.resources
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.Index.resources
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.Khachhang.resources
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.SIM.resources
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.ThongTinHDDK.resources
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.ThongtinKH.resources
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.ThongtinSIM.resources
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.Properties.Resources.resources
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.csproj.GenerateResource.cache
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.exe.licenses
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.exe
-E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.pdb
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\GD_NHANVIEN.exe.config
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\GD_NHANVIEN.exe
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\GD_NHANVIEN.pdb
@@ -208,5 +193,23 @@ E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\de\Dev
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\es\DevExpress.Office.v18.1.Core.resources.dll
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\ja\DevExpress.Office.v18.1.Core.resources.dll
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.csprojAssemblyReference.cache
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.Form1.resources
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.DangKySIM.resources
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.HoaDonTC.resources
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.Index.resources
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.Khachhang.resources
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.SIM.resources
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.ThongTinHDDK.resources
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.ThongtinKH.resources
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.ThongtinSIM.resources
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.Properties.Resources.resources
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.csproj.GenerateResource.cache
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.exe.licenses
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.csproj.CopyComplete
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.exe
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.pdb
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\Common.dll
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\Common.pdb
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\Common.dll.config
