@@ -5,27 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="breadcrumbs">
-    <div class="col-sm-4">
-        <div class="page-header float-left">
-            <div class="page-title">
-                <h1>Dashboard</h1>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-8">
-        <div class="page-header float-right">
-            <div class="page-title">
-                <ol class="breadcrumb text-right">
-                    <li><a href="/Assets/sufee-admin-dashboard-master/#">Dashboard</a></li>
-                    <li><a href="/Assets/sufee-admin-dashboard-master/#">Table</a></li>
-                    <li class="active">Data table</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="content mt-3">
     <div class="animated fadeIn">
         <div class="row">
@@ -70,7 +49,10 @@
                                         @Html.DisplayNameFor(model => model.SIM.TenSim)
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.NgayHD)
+                                        @Html.DisplayNameFor(model => model.ThoiGianBD)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ThoiGianKT)
                                     </th>
                                     <th>
                                         @Html.DisplayNameFor(model => model.SoPhutSD)
@@ -92,7 +74,10 @@
                                             @Html.DisplayFor(modelItem => item.SIM.TenSim)
                                         </td>
                                         <td>
-                                            @item.NgayHD.Date.ToString("dd/MM/yyyy")
+                                            @item.ThoiGianBD
+                                        </td>
+                                        <td>
+                                            @item.ThoiGianKT
                                         </td>
                                         <td>
                                             @Html.DisplayFor(modelItem => item.SoPhutSD)
@@ -106,6 +91,10 @@
                         </table>
                     </div>
                 </div>
+                @if (@ViewBag.TienHoaDonThang != null)
+                {
+                    <h3>@ViewBag.TienHoaDonThang vnd</h3>
+                }
             </div>
 
 

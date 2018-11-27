@@ -292,3 +292,6 @@ D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\obj\Debug\GiaoDienKha
 D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\obj\Debug\GiaoDienKhachHang.csproj.CopyComplete
 D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\obj\Debug\GiaoDienKhachHang.dll
 D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\obj\Debug\GiaoDienKhachHang.pdb
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\bin\Common.dll
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\bin\Common.pdb
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\bin\Common.dll.config

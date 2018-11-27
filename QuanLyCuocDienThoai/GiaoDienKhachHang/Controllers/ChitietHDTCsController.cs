@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Common;
 using Model.EFModel;
 
 namespace GiaoDienKhachHang.Controllers
@@ -14,26 +15,36 @@ namespace GiaoDienKhachHang.Controllers
     {
         private QLCuocDTContext db = new QLCuocDTContext();
 
+        // GET: ChitietHDTCs
         public ActionResult Index(int id)
         {
             DateTime now = DateTime.Now;
             ViewBag.MonthNow = now.Month;
-            
-            var startDate = new DateTime(now.Year, now.Month,1);
-            var endDate = startDate.AddMonths(1).AddDays(-1);
-            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.NgayHD >= startDate & m.NgayHD <= endDate);
 
+            var startDate = new DateTime(now.Year, now.Month, 1);
+            var endDate = startDate.AddMonths(1).AddDays(-1);
+
+
+            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.HoaDonTinhCuoc).Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.ThoiGianBD>= startDate & m.ThoiGianKT <= endDate);
             return View(chitietHDTCs.ToList());
         }
-
 
         [HttpPost]
         public ActionResult Index(int id, int? thang)
         {
+            ViewBag.MonthNow = thang;
             DateTime now = DateTime.Now;
             var startDate = new DateTime(now.Year, thang.GetValueOrDefault(1), 1);
             var endDate = startDate.AddMonths(1).AddDays(-1);
-            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.SIM).Where(m=>m.SIM.HoaDonDangKy.KhachHangID== id&m.NgayHD>=startDate&m.NgayHD<=endDate);
+            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.HoaDonTinhCuoc).Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.ThoiGianBD >= startDate & m.ThoiGianKT <= endDate);
+            decimal tienHoaDonThang = 0;
+            foreach(var item in chitietHDTCs)
+            {
+                tienHoaDonThang+= MathSolve.TinhTienCuoc(item.ThoiGianBD.GetValueOrDefault(DateTime.MinValue), item.ThoiGianKT.GetValueOrDefault(DateTime.MinValue));
+
+            }
+            tienHoaDonThang += 50000;
+            ViewBag.TienHoaDonThang = tienHoaDonThang.ToString("N0");
             return View(chitietHDTCs.ToList());
         }
 
@@ -55,6 +66,7 @@ namespace GiaoDienKhachHang.Controllers
         // GET: ChitietHDTCs/Create
         public ActionResult Create()
         {
+            ViewBag.HoaDonTinhCuocID = new SelectList(db.HoaDonTinhCuocs, "HoaDonTinhCuocID", "HoaDonTinhCuocID");
             ViewBag.SIMID = new SelectList(db.SIMs, "SIMID", "TenSim");
             return View();
         }
@@ -64,7 +76,7 @@ namespace GiaoDienKhachHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ChitietHDTCID,SIMID,NgayHD,SoPhutSD,Flag")] ChitietHDTC chitietHDTC)
+        public ActionResult Create([Bind(Include = "ChitietHDTCID,SIMID,ThoiGianBD,ThoiGianKT,SoPhutSD,HoaDonTinhCuocID,Flag")] ChitietHDTC chitietHDTC)
         {
             if (ModelState.IsValid)
             {
@@ -73,6 +85,7 @@ namespace GiaoDienKhachHang.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.HoaDonTinhCuocID = new SelectList(db.HoaDonTinhCuocs, "HoaDonTinhCuocID", "HoaDonTinhCuocID", chitietHDTC.HoaDonTinhCuocID);
             ViewBag.SIMID = new SelectList(db.SIMs, "SIMID", "TenSim", chitietHDTC.SIMID);
             return View(chitietHDTC);
         }
@@ -89,6 +102,7 @@ namespace GiaoDienKhachHang.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.HoaDonTinhCuocID = new SelectList(db.HoaDonTinhCuocs, "HoaDonTinhCuocID", "HoaDonTinhCuocID", chitietHDTC.HoaDonTinhCuocID);
             ViewBag.SIMID = new SelectList(db.SIMs, "SIMID", "TenSim", chitietHDTC.SIMID);
             return View(chitietHDTC);
         }
@@ -98,7 +112,7 @@ namespace GiaoDienKhachHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ChitietHDTCID,SIMID,NgayHD,SoPhutSD,Flag")] ChitietHDTC chitietHDTC)
+        public ActionResult Edit([Bind(Include = "ChitietHDTCID,SIMID,ThoiGianBD,ThoiGianKT,SoPhutSD,HoaDonTinhCuocID,Flag")] ChitietHDTC chitietHDTC)
         {
             if (ModelState.IsValid)
             {
@@ -106,6 +120,7 @@ namespace GiaoDienKhachHang.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.HoaDonTinhCuocID = new SelectList(db.HoaDonTinhCuocs, "HoaDonTinhCuocID", "HoaDonTinhCuocID", chitietHDTC.HoaDonTinhCuocID);
             ViewBag.SIMID = new SelectList(db.SIMs, "SIMID", "TenSim", chitietHDTC.SIMID);
             return View(chitietHDTC);
         }
