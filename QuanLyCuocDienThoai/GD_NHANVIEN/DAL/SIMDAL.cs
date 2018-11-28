@@ -102,5 +102,14 @@ namespace GD_NHANVIEN.DAL
                
             return res.ToList();
         }
+        public List<SIM> LoadSIMKH(int idmakh)
+        {
+            var res = (from a in db.SIMs
+                       join b in db.HoaDonDangKies on a.HoaDonDangKyID equals b.HoaDonDangKyID
+                       join c in db.KhachHangs on b.KhachHangID equals c.KhachHangID
+                       where a.Flag == true && c.KhachHangID == idmakh
+                       select a).ToList();
+            return res;
+        }
     }
 }

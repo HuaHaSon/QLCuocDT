@@ -34,3 +34,15 @@ E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.csproj
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.dll
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.pdb
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\Model.dll.config
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\Model.dll
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\Model.pdb
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.dll
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.xml
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.dll
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.pdb
