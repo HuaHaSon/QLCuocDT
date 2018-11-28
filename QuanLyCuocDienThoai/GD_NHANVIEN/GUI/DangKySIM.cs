@@ -48,7 +48,7 @@ namespace GD_NHANVIEN.GUI
 
         private void simpleButton6_Click(object sender, EventArgs e)
         {
-            ThongtinKH f = new ThongtinKH(null,this);
+            ThongtinKH f = new ThongtinKH(null,this,null);
             f.Show();
         }
 

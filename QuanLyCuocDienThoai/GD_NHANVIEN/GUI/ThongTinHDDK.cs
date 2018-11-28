@@ -46,7 +46,7 @@ namespace GD_NHANVIEN.GUI
         private void simpleButton6_Click(object sender, EventArgs e)
         {
             
-            ThongtinKH f = new ThongtinKH(this,null);
+            ThongtinKH f = new ThongtinKH(this,null,null);
             //txtmakh.Text = MaKH;
             f.Show();
         }
@@ -87,12 +87,75 @@ namespace GD_NHANVIEN.GUI
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+        public void Clear()
+        {
+            DangKySIMDAL dal = new DangKySIMDAL();
+            txtidhddk.Clear();
+            txtmakh.Clear();
+            cbngaydk.Checked = false;
+            txtchiphidk.Clear();
+            ttdky.Checked = false;
+            hoaDonDangKiesBindingSource.DataSource = dal.Load();
+        }
+        public void ClearHD()
+        {
+
+            txtidhddk.Clear();
+            txtmakh.Clear();
+            cbngaydk.Checked = false;
+            txtchiphidk.Clear();
+            ttdky.Checked = false;
+
+        }
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DangKySIMDAL dal = new DangKySIMDAL();
+                if (txtmakh.Text == "" && cbngaydk.Checked == false && txtchiphidk.Text == "" && ttdky.Checked == false)
+                {
+                    var res = dal.TimHDDK("", "False", "", "", "False");
+                    hoaDonDangKiesBindingSource.DataSource = res;
+                    MessageBox.Show("Tìm kiếm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    ClearHD();
+                }
+                else if (dal.testnumber(txtchiphidk.Text) == 0)
+                {
+                    MessageBox.Show("Chi phí đăng ký phải là số", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                else
+                {
+                    string a = "";
+                    string b = "";
+                    if (ttdky.Checked == true)
+                        a = "True";
+                    a = "False";
+                    if (cbngaydk.Checked == true)
+                        b = "True";
+                    b = "False";
+                    var res = dal.TimHDDK(txtmakh.Text, b, ngaydky.Value.ToString("yyyy/MM/dd"), txtchiphidk.Text, a);
+                    hoaDonDangKiesBindingSource.DataSource = res;
+                    MessageBox.Show("Tìm kiếm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    ClearHD();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã có lỗi xảy ra!");
+            }
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
     }
 }

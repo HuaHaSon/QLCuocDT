@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using Common;
 namespace GD_NHANVIEN.GUI
 {
     public partial class Index : DevExpress.XtraEditors.XtraForm
@@ -16,12 +16,6 @@ namespace GD_NHANVIEN.GUI
         public Index()
         {
             InitializeComponent();
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            
-
         }
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
@@ -78,6 +72,22 @@ namespace GD_NHANVIEN.GUI
         private void simpleButton5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void simpleButton5_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                RandomFileSimLog.taofile();
+                RandomFileSimLog.docFile();
+                RandomFileSimLog.addDatatoDB();
+                MessageBox.Show("Thêm File thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã có lỗi xảy ra!");
+            }
+            
         }
     }
 }

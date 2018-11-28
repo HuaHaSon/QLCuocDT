@@ -228,6 +228,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(117, 45);
             this.simpleButton2.TabIndex = 83;
             this.simpleButton2.Text = "Thoát";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -239,6 +240,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(117, 45);
             this.simpleButton1.TabIndex = 82;
             this.simpleButton1.Text = "Chọn";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // txtidsim
             // 

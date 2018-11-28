@@ -101,6 +101,7 @@
             this.simpleButton4.Size = new System.Drawing.Size(117, 45);
             this.simpleButton4.TabIndex = 66;
             this.simpleButton4.Text = "Tìm kiếm";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // simpleButton3
             // 
@@ -112,6 +113,7 @@
             this.simpleButton3.Size = new System.Drawing.Size(117, 45);
             this.simpleButton3.TabIndex = 65;
             this.simpleButton3.Text = "Refresh";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // txtchiphidk
             // 

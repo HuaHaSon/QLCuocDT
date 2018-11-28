@@ -63,16 +63,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\ChiTietHDTC.cs" />
+    <Compile Include="DAL\ChiTietHDTCDAL.cs" />
     <Compile Include="DAL\DangKySIMDAL.cs" />
+    <Compile Include="DAL\HoaDonTCDAL.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
     <Compile Include="DAL\SIMDAL.cs" />
-    <Compile Include="DAL\XuLiFile.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ChiTietHDTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ChiTietHDTC.Designer.cs">
+      <DependentUpon>ChiTietHDTC.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\DangKySIM.cs">
       <SubType>Form</SubType>
@@ -126,6 +132,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ChiTietHDTC.resx">
+      <DependentUpon>ChiTietHDTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangKySIM.resx">
       <DependentUpon>DangKySIM.cs</DependentUpon>

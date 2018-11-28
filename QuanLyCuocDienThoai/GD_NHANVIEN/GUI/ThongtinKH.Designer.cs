@@ -282,6 +282,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(117, 45);
             this.simpleButton2.TabIndex = 81;
             this.simpleButton2.Text = "Thoát";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // label7
             // 
