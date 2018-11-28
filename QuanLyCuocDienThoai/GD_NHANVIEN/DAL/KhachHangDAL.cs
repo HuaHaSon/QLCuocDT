@@ -35,7 +35,7 @@ namespace GD_NHANVIEN.DAL
         {
             return db.KhachHangs.Where(s => s.Flag == true).ToList();
         }
-        public void ThemKH(string tenkh,string cmnd,string nghenghiep,string chucvu,string diachi)
+        public void ThemKH(string tenkh,string cmnd,string nghenghiep,string chucvu,string diachi,string email)
         {
             KhachHang kh = new KhachHang();
             kh.TenKH = tenkh;
@@ -43,11 +43,12 @@ namespace GD_NHANVIEN.DAL
             kh.NgheNghiep = nghenghiep;
             kh.ChucVu = chucvu;
             kh.DiaChi = diachi;
+            kh.Email = email;
             kh.Flag = true;
             db.KhachHangs.Add(kh);
             db.SaveChanges();
         }
-        public void SuaKH(string makh,string tenkh,string cmnd,string nghenghiep,string chucvu,string diachi)
+        public void SuaKH(string makh,string tenkh,string cmnd,string nghenghiep,string chucvu,string diachi,string email)
         {
             var res = Convert.ToInt32(makh);
             var search = db.KhachHangs.Where(s => s.KhachHangID == res).SingleOrDefault();
@@ -56,6 +57,7 @@ namespace GD_NHANVIEN.DAL
             search.NgheNghiep = nghenghiep;
             search.ChucVu = chucvu;
             search.DiaChi = diachi;
+            search.Email = email;
             db.SaveChanges();
         }
         public void XoaKH(string makh)
@@ -65,7 +67,7 @@ namespace GD_NHANVIEN.DAL
             search.Flag = false;
             db.SaveChanges();
         }
-        public List<KhachHang> TimKH(string tenkh,string cmnd,string nghienghiep,string chucvu,string diachi)
+        public List<KhachHang> TimKH(string tenkh,string cmnd,string nghienghiep,string chucvu,string diachi,string email)
         {
             var search = db.KhachHangs.Where(s => s.Flag == true);
             if (tenkh != null)
@@ -78,6 +80,8 @@ namespace GD_NHANVIEN.DAL
                 search = search.Where(s => s.ChucVu.Contains(chucvu));
             if (diachi != null)
                 search = search.Where(s => s.DiaChi.Contains(diachi));
+            if (email != null)
+                search = search.Where(s => s.Email.Contains(email));
             return search.ToList();
         }
     }

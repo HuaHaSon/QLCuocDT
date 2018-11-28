@@ -43,23 +43,28 @@
             this.txttenkh = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtmakh = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.khachHangsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.khachHangsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.colKhachHangID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgheNghiep = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFlag = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtmakh = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton3
@@ -67,7 +72,7 @@
             this.simpleButton3.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(425, 200);
+            this.simpleButton3.Location = new System.Drawing.Point(425, 226);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(117, 45);
             this.simpleButton3.TabIndex = 66;
@@ -79,7 +84,7 @@
             this.simpleButton4.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(273, 200);
+            this.simpleButton4.Location = new System.Drawing.Point(273, 226);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(117, 45);
             this.simpleButton4.TabIndex = 67;
@@ -182,21 +187,80 @@
             this.label1.TabIndex = 68;
             this.label1.Text = "THÔNG TIN KHÁCH HÀNG";
             // 
-            // gridControl1
+            // simpleButton1
             // 
-            this.gridControl1.DataSource = this.khachHangsBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(25, 262);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(762, 192);
-            this.gridControl1.TabIndex = 79;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(530, 489);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(117, 45);
+            this.simpleButton1.TabIndex = 80;
+            this.simpleButton1.Text = "Chọn";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(670, 489);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(117, 45);
+            this.simpleButton2.TabIndex = 81;
+            this.simpleButton2.Text = "Thoát";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(24, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 13);
+            this.label7.TabIndex = 82;
+            this.label7.Text = "Mã khách hàng";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtmakh
+            // 
+            this.txtmakh.Location = new System.Drawing.Point(113, 60);
+            this.txtmakh.Name = "txtmakh";
+            this.txtmakh.ReadOnly = true;
+            this.txtmakh.Size = new System.Drawing.Size(170, 21);
+            this.txtmakh.TabIndex = 83;
+            // 
+            // txtemail
+            // 
+            this.txtemail.Location = new System.Drawing.Point(113, 189);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(170, 21);
+            this.txtemail.TabIndex = 85;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(24, 192);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 84;
+            this.label8.Text = "Email";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // khachHangsBindingSource
             // 
             this.khachHangsBindingSource.DataSource = typeof(Model.EFModel.KhachHang);
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.khachHangsBindingSource1;
+            this.gridControl1.Location = new System.Drawing.Point(16, 285);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(770, 198);
+            this.gridControl1.TabIndex = 86;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click_1);
             // 
             // gridView1
             // 
@@ -206,10 +270,15 @@
             this.colCMND,
             this.colNgheNghiep,
             this.colChucVu,
+            this.colEmail,
             this.colDiaChi,
             this.colFlag});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            // 
+            // khachHangsBindingSource1
+            // 
+            this.khachHangsBindingSource1.DataSource = typeof(Model.EFModel.KhachHang);
             // 
             // colKhachHangID
             // 
@@ -246,72 +315,39 @@
             this.colChucVu.Visible = true;
             this.colChucVu.VisibleIndex = 4;
             // 
+            // colEmail
+            // 
+            this.colEmail.FieldName = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.Visible = true;
+            this.colEmail.VisibleIndex = 5;
+            // 
             // colDiaChi
             // 
             this.colDiaChi.FieldName = "DiaChi";
             this.colDiaChi.Name = "colDiaChi";
             this.colDiaChi.Visible = true;
-            this.colDiaChi.VisibleIndex = 5;
+            this.colDiaChi.VisibleIndex = 6;
             // 
             // colFlag
             // 
             this.colFlag.FieldName = "Flag";
             this.colFlag.Name = "colFlag";
             this.colFlag.Visible = true;
-            this.colFlag.VisibleIndex = 6;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(530, 469);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(117, 45);
-            this.simpleButton1.TabIndex = 80;
-            this.simpleButton1.Text = "Chọn";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(670, 469);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(117, 45);
-            this.simpleButton2.TabIndex = 81;
-            this.simpleButton2.Text = "Thoát";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 63);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 13);
-            this.label7.TabIndex = 82;
-            this.label7.Text = "Mã khách hàng";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtmakh
-            // 
-            this.txtmakh.Location = new System.Drawing.Point(113, 60);
-            this.txtmakh.Name = "txtmakh";
-            this.txtmakh.ReadOnly = true;
-            this.txtmakh.Size = new System.Drawing.Size(170, 21);
-            this.txtmakh.TabIndex = 83;
+            this.colFlag.VisibleIndex = 7;
             // 
             // ThongtinKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 526);
+            this.ClientSize = new System.Drawing.Size(804, 559);
+            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.txtemail);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.txtmakh);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.txtcmnd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtnn);
@@ -327,9 +363,10 @@
             this.Controls.Add(this.simpleButton3);
             this.Name = "ThongtinKH";
             this.Text = "ThongtinKH";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,19 +386,23 @@
         private System.Windows.Forms.TextBox txttenkh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtmakh;
+        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.BindingSource khachHangsBindingSource;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private System.Windows.Forms.BindingSource khachHangsBindingSource1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colKhachHangID;
         private DevExpress.XtraGrid.Columns.GridColumn colTenKH;
         private DevExpress.XtraGrid.Columns.GridColumn colCMND;
         private DevExpress.XtraGrid.Columns.GridColumn colNgheNghiep;
         private DevExpress.XtraGrid.Columns.GridColumn colChucVu;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmail;
         private DevExpress.XtraGrid.Columns.GridColumn colDiaChi;
         private DevExpress.XtraGrid.Columns.GridColumn colFlag;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtmakh;
     }
 }
