@@ -51,8 +51,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.khachHangsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.khachHangsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colKhachHangID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,8 +63,8 @@
             this.colFlag = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton3
@@ -262,6 +262,10 @@
             this.gridView1});
             this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click_1);
             // 
+            // khachHangsBindingSource1
+            // 
+            this.khachHangsBindingSource1.DataSource = typeof(Model.EFModel.KhachHang);
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -275,10 +279,7 @@
             this.colFlag});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            // 
-            // khachHangsBindingSource1
-            // 
-            this.khachHangsBindingSource1.DataSource = typeof(Model.EFModel.KhachHang);
+            this.gridView1.OptionsBehavior.Editable = false;
             // 
             // colKhachHangID
             // 
@@ -365,8 +366,8 @@
             this.Text = "ThongtinKH";
             ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

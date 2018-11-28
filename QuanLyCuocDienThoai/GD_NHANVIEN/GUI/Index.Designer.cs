@@ -37,8 +37,8 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.panelmain2 = new System.Windows.Forms.Panel();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -57,13 +57,14 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.simpleButton4);
             this.tabPage1.Controls.Add(this.simpleButton2);
             this.tabPage1.Controls.Add(this.simpleButton1);
             this.tabPage1.Controls.Add(this.panelmain1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(870, 621);
+            this.tabPage1.Size = new System.Drawing.Size(870, 649);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản lý";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -104,7 +105,6 @@
             // 
             this.tabPage2.Controls.Add(this.simpleButton5);
             this.tabPage2.Controls.Add(this.simpleButton3);
-            this.tabPage2.Controls.Add(this.simpleButton4);
             this.tabPage2.Controls.Add(this.panelmain2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -119,7 +119,7 @@
             this.simpleButton5.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton5.Appearance.Options.UseFont = true;
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(365, 6);
+            this.simpleButton5.Location = new System.Drawing.Point(213, 6);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(199, 75);
             this.simpleButton5.TabIndex = 65;
@@ -131,24 +131,12 @@
             this.simpleButton3.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(160, 6);
+            this.simpleButton3.Location = new System.Drawing.Point(8, 6);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(182, 75);
             this.simpleButton3.TabIndex = 7;
             this.simpleButton3.Text = "Hóa Đơn Tính Cước";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(9, 6);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(135, 75);
-            this.simpleButton4.TabIndex = 6;
-            this.simpleButton4.Text = "Đăng Ký SIM";
-            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // panelmain2
             // 
@@ -156,6 +144,18 @@
             this.panelmain2.Name = "panelmain2";
             this.panelmain2.Size = new System.Drawing.Size(898, 556);
             this.panelmain2.TabIndex = 4;
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton4.Appearance.Options.UseFont = true;
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(305, 6);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(135, 75);
+            this.simpleButton4.TabIndex = 7;
+            this.simpleButton4.Text = "Đăng Ký SIM";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click_1);
             // 
             // Index
             // 
@@ -181,8 +181,8 @@
         private System.Windows.Forms.Panel panelmain1;
         private System.Windows.Forms.TabPage tabPage2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private System.Windows.Forms.Panel panelmain2;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
     }
 }

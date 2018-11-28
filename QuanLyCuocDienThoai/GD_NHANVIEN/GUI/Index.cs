@@ -89,5 +89,14 @@ namespace GD_NHANVIEN.GUI
             }
             
         }
+
+        private void simpleButton4_Click_1(object sender, EventArgs e)
+        {
+            panelmain1.Controls.Clear();
+            DangKySIM f = new DangKySIM();
+            f.TopLevel = false;
+            panelmain1.Controls.Add(f);
+            f.Show();
+        }
     }
 }
