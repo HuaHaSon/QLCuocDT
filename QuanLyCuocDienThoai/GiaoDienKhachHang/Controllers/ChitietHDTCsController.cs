@@ -16,8 +16,14 @@ namespace GiaoDienKhachHang.Controllers
         private QLCuocDTContext db = new QLCuocDTContext();
 
         // GET: ChitietHDTCs
-        public ActionResult Index(int id)
+        public ActionResult Index(int? id)
         {
+            if (id == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            ViewBag.IDKhach = id;
+            ViewBag.TenKhachHang = db.KhachHangs.Where(m => m.KhachHangID == id).Select(m => m.TenKH).FirstOrDefault();
             DateTime now = DateTime.Now;
             ViewBag.MonthNow = now.Month;
 
@@ -26,23 +32,25 @@ namespace GiaoDienKhachHang.Controllers
 
 
             var chitietHDTCs = db.ChitietHDTCs.Include(c => c.HoaDonTinhCuoc).Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.ThoiGianBD>= startDate & m.ThoiGianKT <= endDate).OrderByDescending(m=>m.ThoiGianBD);
-            ViewBag.SIMID = new SelectList(db.SIMs.Where(m=>m.HoaDonDangKy.KhachHangID == id), "SimID", "SoSim");
+            ViewBag.Sim = new SelectList(db.SIMs.Where(m=>m.HoaDonDangKy.KhachHangID == id), "SimID", "SoSim");
             return View(chitietHDTCs.ToList());
         }
 
         [HttpPost]
-        public ActionResult Index(int id, int? thang,int? SIMID)
+        public ActionResult Index(int id, int? thang,int? Sim)
         {
-            ViewBag.SIMID = new SelectList(db.SIMs.Where(m => m.HoaDonDangKy.KhachHangID == id), "SimID", "SoSim");
+            ViewBag.IDKhach = id;
+            ViewBag.TenKhachHang = db.KhachHangs.Where(m => m.KhachHangID == id).Select(m => m.TenKH).FirstOrDefault();
+            ViewBag.Sim = new SelectList(db.SIMs.Where(m => m.HoaDonDangKy.KhachHangID == id), "SimID", "SoSim");
             ViewBag.MonthNow = thang;
             DateTime now = DateTime.Now;
             var startDate = new DateTime(now.Year, thang.GetValueOrDefault(1), 1);
             var endDate = startDate.AddMonths(1).AddDays(-1);
 
                 var chitietHDTCs = db.ChitietHDTCs.Include(c => c.HoaDonTinhCuoc).Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.ThoiGianBD >= startDate & m.ThoiGianKT <= endDate);
-            if(SIMID != null)
+            if(Sim != null)
             {
-                chitietHDTCs = chitietHDTCs.Where(m=>m.SIMID== SIMID);
+                chitietHDTCs = chitietHDTCs.Where(m=>m.SIMID== Sim);
             }
             decimal tienHoaDonThang = 0;
             foreach(var item in chitietHDTCs)
@@ -50,7 +58,14 @@ namespace GiaoDienKhachHang.Controllers
                 tienHoaDonThang+= MathSolve.TinhTienCuoc(item.ThoiGianBD.GetValueOrDefault(DateTime.MinValue), item.ThoiGianKT.GetValueOrDefault(DateTime.MinValue));
 
             }
-            tienHoaDonThang += 50000;
+            if (Sim != null)
+            {
+                tienHoaDonThang += 50000;
+            }
+            else
+            {
+                tienHoaDonThang += 50000 * chitietHDTCs.Select(m => m.SIMID).Distinct().Count();
+            }
             ViewBag.TienHoaDonThang = tienHoaDonThang.ToString("N0");
             return View(chitietHDTCs.ToList());
         }

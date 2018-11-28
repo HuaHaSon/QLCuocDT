@@ -64,6 +64,7 @@ namespace Common
         }
         public static void docFile()
         {
+            db.Database.ExecuteSqlCommand("TRUNCATE TABLE [FileLogSIM]");
             string[] lines = System.IO.File.ReadAllLines(@"C:\test\test.txt");
             foreach (string line in lines)
             {

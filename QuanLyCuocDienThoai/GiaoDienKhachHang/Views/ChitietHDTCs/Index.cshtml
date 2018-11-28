@@ -16,7 +16,7 @@
                         @using (Html.BeginForm("Index", "ChitietHDTCs", FormMethod.Post, new { style = "Float:right" }))
                         {
                             <label>Chọn Sim: </label>
-                            @Html.DropDownList("SIMID")
+                            @Html.DropDownList("Sim",null,"Tất cả sim", new { onchange = "this.form.submit();" })
                             <label>Chọn Tháng: </label>
                             <select id="thang" name="thang" onchange='if(this.value != 0) { this.form.submit(); }'>
                                 <option value="0">Chọn tháng</option>
@@ -145,6 +145,10 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#bootstrap-data-table-export').DataTable();
+            
+            $(function () {
+                $('#thang').val(@ViewBag.MonthNow);
+            });
         });
     </script>
 }
