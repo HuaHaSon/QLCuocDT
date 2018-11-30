@@ -86,6 +86,12 @@
     <Compile Include="GUI\DangKySIM.Designer.cs">
       <DependentUpon>DangKySIM.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GuiMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GuiMail.Designer.cs">
+      <DependentUpon>GuiMail.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HoaDonTC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangKySIM.resx">
       <DependentUpon>DangKySIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GuiMail.resx">
+      <DependentUpon>GuiMail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoaDonTC.resx">
       <DependentUpon>HoaDonTC.cs</DependentUpon>

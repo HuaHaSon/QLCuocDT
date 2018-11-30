@@ -67,6 +67,7 @@
             this.HDprintPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.HDprintDocument1 = new System.Drawing.Printing.PrintDocument();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.bangdhtc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonTinhCuocsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -119,7 +120,7 @@
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(179, 271);
+            this.simpleButton1.Location = new System.Drawing.Point(67, 263);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(117, 45);
             this.simpleButton1.TabIndex = 64;
@@ -368,7 +369,7 @@
             this.simpleButton3.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(609, 271);
+            this.simpleButton3.Location = new System.Drawing.Point(497, 263);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(117, 45);
             this.simpleButton3.TabIndex = 66;
@@ -380,7 +381,7 @@
             this.simpleButton4.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(399, 271);
+            this.simpleButton4.Location = new System.Drawing.Point(287, 263);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(117, 45);
             this.simpleButton4.TabIndex = 67;
@@ -413,11 +414,24 @@
             this.simpleButton2.Text = "In Hoá Đơn";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
+            // simpleButton5
+            // 
+            this.simpleButton5.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton5.Appearance.Options.UseFont = true;
+            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.simpleButton5.Location = new System.Drawing.Point(704, 263);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(117, 45);
+            this.simpleButton5.TabIndex = 88;
+            this.simpleButton5.Text = "Gửi mail";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            // 
             // HoaDonTC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 560);
+            this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.cbngay);
             this.Controls.Add(this.txtidhd);
@@ -493,5 +507,6 @@
         private System.Windows.Forms.PrintPreviewDialog HDprintPreviewDialog1;
         private System.Drawing.Printing.PrintDocument HDprintDocument1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton5;
     }
 }

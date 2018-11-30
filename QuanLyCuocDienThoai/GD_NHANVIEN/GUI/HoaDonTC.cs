@@ -169,5 +169,15 @@ namespace GD_NHANVIEN.GUI
             txttongtien.Clear();
             cbngay.Checked = false;
         }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            if (txtidsim.Text == "" || txtmakh.Text == "" || txtcuoctb.Text == "" || txtthanhtien.Text == "" || txttongtien.Text == "" || cbngay.Checked == false)
+            {
+                MessageBox.Show("Vui lòng tính cước để gửi!!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            GuiMail f = new GuiMail(txtmakh.Text,txtidsim.Text,dtngay.Text,txtcuoctb.Text,txtthanhtien.Text,txttongtien.Text);
+            f.Show();
+        }
     }
 }

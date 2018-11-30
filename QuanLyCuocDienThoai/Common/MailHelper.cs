@@ -10,7 +10,7 @@ namespace Common
 {
     public static class MailHelper
     {
-        public static void SendMailAuthentication(string toEmail, string subject,string thang,string tienThueBao, string tienCuoc)
+        public static void SendMailAuthentication(string toEmail, string tenkh,string sosim,string subject,string thang,string tienThueBao, string tienCuoc,string tongtien)
         {
             var fromEmailAddress = "trungsendmailnek@gmail.com";
             var fromEmailDisplayName = "Quản lý tính cước tháng"+thang;
@@ -22,7 +22,13 @@ namespace Common
             MailMessage message = new MailMessage(new MailAddress(fromEmailAddress, fromEmailDisplayName), new MailAddress(toEmail));
             message.Subject = subject;
             message.IsBodyHtml = true;
-            message.Body = "<p>Tiền cước tháng"+thang+": <b style=\"color: red\">" + tienCuoc + " vnd</b>.</p><br/><p> Tiền thuê bao:"+ tienThueBao+" vnd";
+            message.Body = "<p class=\"alignCenter\">Hóa đơn cước tháng"+thang+
+                "<br/>" +
+                "<p> Khách hàng: <b style=\"color: red\"> " + tenkh +
+                "<p> Số SIM: <b style=\"color: red\"> " +  sosim +
+                "<p> Tiền thuê bao: <b style=\"color: red\"> " + tienThueBao+" vnd"+
+                "<p> Tiền cước: <b style=\"color: red\"> " + tienCuoc + " vnd" +
+                "<p> Tổng tiền là: <b style=\"color: red\"> " + tongtien + " vnd";
 
             var client = new SmtpClient();
             client.Credentials = new NetworkCredential(fromEmailAddress, fromEmailPassword);
