@@ -217,3 +217,4 @@ C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Deb
 C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\Common.pdb
 C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\Common.dll.config
 C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.ChiTietHDTC.resources
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.ChiTietHDTC.resources

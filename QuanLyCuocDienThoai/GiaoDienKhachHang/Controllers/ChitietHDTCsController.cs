@@ -47,7 +47,7 @@ namespace GiaoDienKhachHang.Controllers
             var startDate = new DateTime(now.Year, thang.GetValueOrDefault(1), 1);
             var endDate = startDate.AddMonths(1).AddDays(-1);
 
-                var chitietHDTCs = db.ChitietHDTCs.Include(c => c.HoaDonTinhCuoc).Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.ThoiGianBD >= startDate & m.ThoiGianKT <= endDate);
+            var chitietHDTCs = db.ChitietHDTCs.Include(c => c.HoaDonTinhCuoc).Include(c => c.SIM).Where(m => m.SIM.HoaDonDangKy.KhachHangID == id & m.ThoiGianBD >= startDate & m.ThoiGianKT <= endDate);
             if(Sim != null)
             {
                 chitietHDTCs = chitietHDTCs.Where(m=>m.SIMID== Sim);
@@ -58,14 +58,17 @@ namespace GiaoDienKhachHang.Controllers
                 tienHoaDonThang+= MathSolve.TinhTienCuoc(item.ThoiGianBD.GetValueOrDefault(DateTime.MinValue), item.ThoiGianKT.GetValueOrDefault(DateTime.MinValue));
 
             }
+
+            decimal tienThuaBao = 0;
             if (Sim != null)
             {
-                tienHoaDonThang += 50000;
+                tienThuaBao += 50000;
             }
             else
             {
-                tienHoaDonThang += 50000 * chitietHDTCs.Select(m => m.SIMID).Distinct().Count();
+                tienThuaBao += 50000 * chitietHDTCs.Select(m => m.SIMID).Distinct().Count();
             }
+            ViewBag.TienThueBao = tienThuaBao.ToString("N0");
             ViewBag.TienHoaDonThang = tienHoaDonThang.ToString("N0");
             return View(chitietHDTCs.ToList());
         }
