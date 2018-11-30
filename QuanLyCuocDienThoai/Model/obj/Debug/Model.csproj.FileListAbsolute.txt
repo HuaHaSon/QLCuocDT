@@ -46,3 +46,15 @@ C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Mod
 C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.dll
 C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.pdb
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\Model.dll.config
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\Model.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\Model.pdb
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.xml
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.csproj.CopyComplete
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\Model\obj\Debug\Model.pdb

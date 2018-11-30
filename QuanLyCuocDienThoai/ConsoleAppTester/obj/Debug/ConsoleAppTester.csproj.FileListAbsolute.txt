@@ -16,3 +16,21 @@ E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\obj\Debug\C
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\obj\Debug\ConsoleAppTester.csproj.CopyComplete
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\obj\Debug\ConsoleAppTester.exe
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\obj\Debug\ConsoleAppTester.pdb
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\ConsoleAppTester.exe.config
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\ConsoleAppTester.exe
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\ConsoleAppTester.pdb
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\Common.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\EntityFramework.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\Model.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\Common.pdb
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\Common.dll.config
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\EntityFramework.xml
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\Model.pdb
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\bin\Debug\Model.dll.config
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\obj\Debug\ConsoleAppTester.csprojAssemblyReference.cache
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\obj\Debug\ConsoleAppTester.csproj.CoreCompileInputs.cache
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\obj\Debug\ConsoleAppTester.csproj.CopyComplete
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\obj\Debug\ConsoleAppTester.exe
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\ConsoleAppTester\obj\Debug\ConsoleAppTester.pdb

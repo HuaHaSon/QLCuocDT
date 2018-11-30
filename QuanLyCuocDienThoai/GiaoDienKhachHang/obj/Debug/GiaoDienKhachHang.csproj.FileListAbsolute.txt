@@ -295,3 +295,6 @@ D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\obj\Debug\GiaoDienKha
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\bin\Common.dll
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\bin\Common.pdb
 E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\bin\Common.dll.config
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\bin\Common.dll
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\bin\Common.pdb
+D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GiaoDienKhachHang\bin\Common.dll.config
