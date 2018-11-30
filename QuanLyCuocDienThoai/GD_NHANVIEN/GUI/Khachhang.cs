@@ -35,6 +35,7 @@ namespace GD_NHANVIEN.GUI
         KhachHangDAL dal = new KhachHangDAL();
         public void Clear()
         {
+            txtmakh.Clear();
             txttenkh.Clear();
             txtcmnd.Clear();
             txtchucvu.Clear();
@@ -46,6 +47,7 @@ namespace GD_NHANVIEN.GUI
         }
         public void ClearKH()
         {
+            txtmakh.Clear();
             txttenkh.Clear();
             txtcmnd.Clear();
             txtchucvu.Clear();

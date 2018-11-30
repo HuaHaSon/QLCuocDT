@@ -27,21 +27,11 @@ namespace GD_NHANVIEN.DAL
         }
         public int testsosim(string txt)
         {
-            if (txt.Length != 11 && txt.Length!=12)
+            if (txt.Length >=12)
                 return 0;
             return 1;
         }
-        public int testtypesim(string txt)
-        {
-
-            if (txt.Length > 1)
-            {
-                if (txt.Substring(0, 2).Equals("84"))              
-                
-                    return 1;
-            }
-            return 0;
-        }
+        
         public List<SIM> Load()
         {
             return db.SIMs.Where(s => s.Flag == true).ToList();

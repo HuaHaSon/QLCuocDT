@@ -126,7 +126,7 @@ namespace GD_NHANVIEN.GUI
                     MessageBox.Show("Tìm kiếm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     ClearHD();
                 }
-                else if (dal.testnumber(txtchiphidk.Text) == 0)
+                else if (txtchiphidk.Text!=""&&dal.testnumber(txtchiphidk.Text) == 0)
                 {
                     MessageBox.Show("Chi phí đăng ký phải là số", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -137,10 +137,10 @@ namespace GD_NHANVIEN.GUI
                     string b = "";
                     if (ttdky.Checked == true)
                         a = "True";
-                    a = "False";
+                    else a = "False";
                     if (cbngaydk.Checked == true)
                         b = "True";
-                    b = "False";
+                    else b = "False";
                     var res = dal.TimHDDK(txtmakh.Text, b, ngaydky.Value.ToString("yyyy/MM/dd"), txtchiphidk.Text, a);
                     hoaDonDangKiesBindingSource.DataSource = res;
                     MessageBox.Show("Tìm kiếm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);

@@ -70,17 +70,17 @@ namespace GD_NHANVIEN.DAL
         public List<KhachHang> TimKH(string tenkh,string cmnd,string nghienghiep,string chucvu,string diachi,string email)
         {
             var search = db.KhachHangs.Where(s => s.Flag == true);
-            if (tenkh != null)
+            if (tenkh != "")
                 search = search.Where(s => s.TenKH.Contains(tenkh));
-            if (cmnd!=null)
+            if (cmnd!="")
                 search = search.Where(s => s.CMND.Contains(cmnd));
-            if(nghienghiep!=null)
+            if(nghienghiep!="")
                 search = search.Where(s => s.NgheNghiep.Contains(nghienghiep));
-            if (chucvu != null)
+            if (chucvu != "")
                 search = search.Where(s => s.ChucVu.Contains(chucvu));
-            if (diachi != null)
+            if (diachi != "")
                 search = search.Where(s => s.DiaChi.Contains(diachi));
-            if (email != null)
+            if (email != "")
                 search = search.Where(s => s.Email.Contains(email));
             return search.ToList();
         }

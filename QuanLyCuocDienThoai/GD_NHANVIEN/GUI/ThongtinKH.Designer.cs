@@ -49,7 +49,6 @@
             this.txtmakh = new System.Windows.Forms.TextBox();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.khachHangsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.khachHangsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -61,7 +60,6 @@
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFlag = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -246,21 +244,17 @@
             this.label8.Text = "Email";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // khachHangsBindingSource
-            // 
-            this.khachHangsBindingSource.DataSource = typeof(Model.EFModel.KhachHang);
-            // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.khachHangsBindingSource1;
-            this.gridControl1.Location = new System.Drawing.Point(16, 285);
+            this.gridControl1.Location = new System.Drawing.Point(9, 291);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(770, 198);
+            this.gridControl1.Size = new System.Drawing.Size(777, 175);
             this.gridControl1.TabIndex = 86;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click_1);
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click_2);
             // 
             // khachHangsBindingSource1
             // 
@@ -364,7 +358,6 @@
             this.Controls.Add(this.simpleButton3);
             this.Name = "ThongtinKH";
             this.Text = "ThongtinKH";
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -393,7 +386,6 @@
         private System.Windows.Forms.TextBox txtmakh;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.BindingSource khachHangsBindingSource;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private System.Windows.Forms.BindingSource khachHangsBindingSource1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;

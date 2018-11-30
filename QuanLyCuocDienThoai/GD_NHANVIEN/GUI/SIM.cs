@@ -92,10 +92,6 @@ namespace GD_NHANVIEN.GUI
                 {
                     MessageBox.Show("Số sim không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
-                else if(dal.testtypesim(txtsosim.Text)==0)
-                {
-                    MessageBox.Show("Số sim bắt đầu bằng đầu số 84....", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }               
                 else 
                 {
@@ -143,10 +139,7 @@ namespace GD_NHANVIEN.GUI
                 {
                     MessageBox.Show("Số sim không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (dal.testtypesim(txtsosim.Text) == 0)
-                {
-                    MessageBox.Show("Số sim bắt đầu bằng đầu số 84....", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                
                 else if (dal.testexistidhd(Convert.ToInt32(txtidhd.Text)) != IDHDDK_SUA)
                 {
                     MessageBox.Show("Hóa đơn đăng ký đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
