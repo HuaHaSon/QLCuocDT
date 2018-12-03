@@ -48,5 +48,10 @@ namespace GD_NHANVIEN.GUI
             }
 
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

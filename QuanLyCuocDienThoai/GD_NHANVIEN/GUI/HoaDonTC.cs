@@ -176,8 +176,12 @@ namespace GD_NHANVIEN.GUI
             {
                 MessageBox.Show("Vui lòng tính cước để gửi!!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            GuiMail f = new GuiMail(txtmakh.Text,txtidsim.Text,dtngay.Text,txtcuoctb.Text,txtthanhtien.Text,txttongtien.Text);
-            f.Show();
+            else
+            {
+                GuiMail f = new GuiMail(txtmakh.Text, txtidsim.Text, dtngay.Value.ToString("MM/yyyy"), txtcuoctb.Text, txtthanhtien.Text, txttongtien.Text);
+                f.Show();
+            }
+            
         }
     }
 }
