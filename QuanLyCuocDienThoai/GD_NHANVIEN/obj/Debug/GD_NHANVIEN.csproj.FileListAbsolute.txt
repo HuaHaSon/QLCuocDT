@@ -443,3 +443,4 @@ C:\Users\HaSon\Desktop\QLCuocDT-master\QLCuocDT-master\QuanLyCuocDienThoai\GD_NH
 C:\Users\HaSon\Desktop\QLCuocDT-master\QLCuocDT-master\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\ja\DevExpress.Office.v18.1.Core.resources.dll
 C:\Users\HaSon\Desktop\QLCuocDT-master\QLCuocDT-master\QuanLyCuocDienThoai\GD_NHANVIEN\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll
 C:\Users\HaSon\Desktop\QLCuocDT-master\QLCuocDT-master\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.csproj.CopyComplete
+C:\Users\HaSon\Documents\GitHub\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.CTCG.resources

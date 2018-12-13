@@ -67,6 +67,7 @@ namespace GD_NHANVIEN.GUI
             cbngaydk.Checked = false;
             chidk.Clear();
             tttt.Checked = false;
+            MaKH = "";
             hoaDonDangKiesBindingSource1.DataSource = dal.Load();
         }
         public void ClearHD()
@@ -77,7 +78,8 @@ namespace GD_NHANVIEN.GUI
             cbngaydk.Checked = false;
             chidk.Clear();
             tttt.Checked = false;
-           
+            MaKH = "";
+
         }
         private void gridControl1_Click(object sender, EventArgs e)
         {
@@ -89,7 +91,11 @@ namespace GD_NHANVIEN.GUI
             if (res.Equals(true))
                 tttt.Checked = true;
             else tttt.Checked = false;
-            IDKH_SUA= txtmakh.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "KhachHangID").ToString();
+            IDKH_SUA = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "KhachHangID").ToString();
+            MaKH = IDKH_SUA;
+            var a = Convert.ToInt32(IDKH_SUA);
+            txtmakh.Text = db.KhachHangs.Where(s => s.KhachHangID == a).Select(s => s.TenKH).FirstOrDefault().ToString();
+            cbngaydk.Checked = true;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -102,6 +108,10 @@ namespace GD_NHANVIEN.GUI
                 else if (dal.testnumber(chidk.Text) == 0)
                 {
                     MessageBox.Show("Chi phí đăng ký phải là số", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if(MaKH=="")
+                {
+                    MessageBox.Show("Vui lòng chọn khách hàng muốn đăng ký", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -135,7 +145,7 @@ namespace GD_NHANVIEN.GUI
                 
                 else
                 {
-                    if(dal.textexistmakh(Convert.ToInt32(txtmakh.Text))==IDKH_SUA)
+                    if(MaKH=="")
                     {
                         string a = "";
                         if (tttt.Checked == true)
@@ -143,14 +153,30 @@ namespace GD_NHANVIEN.GUI
                         else
                             a = "False";
                         dal.SuaHDDK(txtidhd.Text, ngaydk.Value.ToString("yyyy/MM/dd"), chidk.Text, a);
-                        MessageBox.Show("Sửa hóa đơn "+txtidhd.Text+" thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Sửa hóa đơn " + txtidhd.Text + " thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         Clear();
                     }
-                    else 
+                    else
                     {
-                        MessageBox.Show("Không được sửa khách hàng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (dal.textexistmakh(Convert.ToInt32(MaKH)) == IDKH_SUA)
+                        {
+                            string a = "";
+                            if (tttt.Checked == true)
+                                a = "True";
+                            else
+                                a = "False";
+                            dal.SuaHDDK(txtidhd.Text, ngaydk.Value.ToString("yyyy/MM/dd"), chidk.Text, a);
+                            MessageBox.Show("Sửa hóa đơn " + txtidhd.Text + " thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            Clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không được sửa khách hàng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
                     }
-                    
+
+
                 }
             }
             catch (Exception ex)
@@ -182,7 +208,7 @@ namespace GD_NHANVIEN.GUI
             try
             {
                 DangKySIMDAL dal = new DangKySIMDAL();
-                if (txtmakh.Text == "" && cbngaydk.Checked == false && chidk.Text == "" && tttt.Checked==false)
+                if (MaKH=="" && cbngaydk.Checked == false && chidk.Text == "" && tttt.Checked==false)
                 {
                     var res = dal.TimHDDK("", "False", "", "", "False");
                     hoaDonDangKiesBindingSource1.DataSource = res;
@@ -193,7 +219,6 @@ namespace GD_NHANVIEN.GUI
                 {
                     MessageBox.Show("Chi phí đăng ký phải là số", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
                 else
                 {                   
                         string a = "";
@@ -207,7 +232,7 @@ namespace GD_NHANVIEN.GUI
                     var res=dal.TimHDDK(MaKH, b, ngaydk.Text, chidk.Text, a);
                     hoaDonDangKiesBindingSource1.DataSource = res;
                     MessageBox.Show("Tìm kiếm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        ClearHD();
+                    ClearHD();
                 }
             }
             catch (Exception ex)

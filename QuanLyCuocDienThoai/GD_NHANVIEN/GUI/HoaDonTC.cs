@@ -61,8 +61,8 @@ namespace GD_NHANVIEN.GUI
         public void Change5()
         {
             HoaDonTCDAL dal = new HoaDonTCDAL();
-            TenKH = dal.GetPrintMaKH(Convert.ToInt32(txtidsim.Text));
-            Sosim = dal.GetPrintSim(Convert.ToInt32(txtidsim.Text));
+            TenKH = dal.GetPrintMaKH(Convert.ToInt32(SIM));
+            Sosim = dal.GetPrintSim(Convert.ToInt32(SIM));
         }
         private void simpleButton6_Click(object sender, EventArgs e)
         {
@@ -78,12 +78,14 @@ namespace GD_NHANVIEN.GUI
 
         private void bangdhtc_Click(object sender, EventArgs e)
         {
-            txtidhd.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HoaDonTinhCuocID").ToString();            
-            txtidsim.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SIMID").ToString();
-            dtngay.Value=(DateTime)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NgayHD");
-            txtcuoctb.Text= gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "CuocThueBao").ToString();
-            txtthanhtien.Text=gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ThanhTien").ToString();
-            txttongtien.Text= gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TongTien").ToString();
+            //cbngay.Checked = true;
+            //txtidhd.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HoaDonTinhCuocID").ToString();            
+            //txtidsim.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SIMID").ToString();
+            //dtngay.Value=(DateTime)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NgayHD");
+            //txtcuoctb.Text= gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "CuocThueBao").ToString();
+            //txtthanhtien.Text=gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ThanhTien").ToString();
+            //txttongtien.Text= gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TongTien").ToString();
+            
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -149,9 +151,11 @@ namespace GD_NHANVIEN.GUI
         public void Clear()
         {
             txtidsim.Clear();
+            txtidhd.Clear();
             txtthanhtien.Clear();
             txttongtien.Clear();
             cbngay.Checked = false;
+            SIM = "";
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -174,7 +178,7 @@ namespace GD_NHANVIEN.GUI
             else
             {
 
-                GuiMail f = new GuiMail(txtidsim.Text, dtngay.Value.ToString("MM/yyyy"), txtcuoctb.Text, txtthanhtien.Text, txttongtien.Text);
+                GuiMail f = new GuiMail(SIM, dtngay.Value.ToString("MM/yyyy"), txtcuoctb.Text, txtthanhtien.Text, txttongtien.Text);
                 f.Show();
             }
             
@@ -188,7 +192,7 @@ namespace GD_NHANVIEN.GUI
             }
             else
             {               
-                ChiTietHDTC f = new ChiTietHDTC(txtidsim.Text,txtidhd.Text);
+                ChiTietHDTC f = new ChiTietHDTC(SIM,txtidhd.Text);
                 f.Show();
                 txtthanhtien.Clear();
                 txttongtien.Clear();
@@ -198,8 +202,11 @@ namespace GD_NHANVIEN.GUI
 
         private void gridControl1_Click(object sender, EventArgs e)
         {
+            cbngay.Checked = true;
             txtidhd.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HoaDonTinhCuocThangID").ToString();       
-            txtidsim.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SIMID").ToString();
+            var a = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SIMID").ToString());
+            txtidsim.Text = db.SIMs.Where(s => s.SIMID == a).Select(s => s.SoSim).FirstOrDefault().ToString();
+            SIM = a.ToString();
             dtngay.Value = (DateTime)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ThangHD");
             txtcuoctb.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TienThueBao").ToString();
             txtthanhtien.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TienCuocSD").ToString();

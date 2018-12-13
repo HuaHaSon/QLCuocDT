@@ -57,7 +57,9 @@ namespace GD_NHANVIEN.GUI
         private void gridControl1_Click(object sender, EventArgs e)
         {
             txtidhddk.Text= gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HoaDonDangKyID").ToString();
-            txtmakh.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "KhachHangID").ToString();
+            var a = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "KhachHangID").ToString());
+            MaKH = a.ToString();
+            txtmakh.Text = db.KhachHangs.Where(s => s.KhachHangID == a).Select(s => s.TenKH).FirstOrDefault().ToString();
             txtchiphidk.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ChiPhiDK").ToString();
             ngaydky.Value = (DateTime)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NgayDK");
             var result= gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TinhTrangThanhToan");
@@ -65,6 +67,7 @@ namespace GD_NHANVIEN.GUI
                 ttdky.Checked = true;
             else
                 ttdky.Checked = false;
+            cbngaydk.Checked = true;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -105,6 +108,7 @@ namespace GD_NHANVIEN.GUI
             cbngaydk.Checked = false;
             txtchiphidk.Clear();
             ttdky.Checked = false;
+            MaKH = "";
             hoaDonDangKiesBindingSource.DataSource = dal.Load();
         }
         public void ClearHD()
@@ -115,6 +119,7 @@ namespace GD_NHANVIEN.GUI
             cbngaydk.Checked = false;
             txtchiphidk.Clear();
             ttdky.Checked = false;
+            MaKH = "";
 
         }
         private void simpleButton4_Click(object sender, EventArgs e)
@@ -133,7 +138,6 @@ namespace GD_NHANVIEN.GUI
                 {
                     MessageBox.Show("Chi phí đăng ký phải là số", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
                 else
                 {
                     string a = "";
