@@ -9,9 +9,9 @@ namespace GD_NHANVIEN.DAL
     public class HoaDonTCDAL
     {
         QLCuocDTContext db = new QLCuocDTContext();
-        public List<HoaDonTinhCuoc> Load()
+        public List<HoaDonTinhCuocThang> Load()
         {
-            return db.HoaDonTinhCuocs.Where(s => s.Flag == true).ToList();
+            return db.HoaDonTinhCuocThangs.ToList();
         }
         //public void ThemHD(int idkh,int idsim,string ngayhd,int cuoctb,decimal thanhtien,decimal tongtien)
         //{
@@ -26,30 +26,30 @@ namespace GD_NHANVIEN.DAL
         //    db.HoaDonTinhCuocs.Add(hd);
         //    db.SaveChanges();
         //}
-        public string GetPrintMaKH(int idmakh)
+        public string GetPrintMaKH(int idsim)
         {
-            return db.KhachHangs.Where(s => s.Flag == true && s.KhachHangID == idmakh).Select(s => s.TenKH).FirstOrDefault();
+            var res = from a in db.SIMs
+                      join b in db.HoaDonDangKies on a.HoaDonDangKyID equals b.HoaDonDangKyID
+                      join c in db.KhachHangs on b.KhachHangID equals c.KhachHangID
+                      where a.Flag == true && a.SIMID == idsim
+                      select c.TenKH;
+            return res.FirstOrDefault();
         }
         public string GetPrintSim(int idsim)
         {
             return db.SIMs.Where(s => s.Flag == true && s.SIMID == idsim).Select(s => s.SoSim).FirstOrDefault();
         }
-        public List<HoaDonTinhCuoc> TimHD(string idsim,string idmakh,string ngay,string check)
+        public List<HoaDonTinhCuocThang> TimHD(string idsim,string ngay,string check)
         {
-            var res = db.HoaDonTinhCuocs.Where(s => s.Flag == true);
+            var res = db.HoaDonTinhCuocThangs.ToList();
             if(idsim!="")
             {
                 var a = Convert.ToInt32(idsim);
-                res = res.Where(s => s.SIMID == a);
-            }
-            if (idmakh != "")
-            {
-                var a = Convert.ToInt32(idmakh);
-                res = res.Where(s => s.KhachHangID == a);
-            }
+                res = res.Where(s => s.SIMID == a).ToList();
+            }            
             if (check=="true")
             { var a = Convert.ToDateTime(ngay);
-                res = res.Where(s => s.NgayHD == a);
+                res = res.Where(s => s.ThangHD.Month == a.Month).ToList();
             }
             return res.ToList();
 

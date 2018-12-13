@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
 using GD_NHANVIEN.DAL;
+using Model.EFModel;
 namespace GD_NHANVIEN.GUI
 {
     public partial class ThongTinHDDK : DevExpress.XtraEditors.XtraForm
@@ -17,6 +18,7 @@ namespace GD_NHANVIEN.GUI
         public string MaKH="";
         SIM f;
         ThongtinSIM g;
+        QLCuocDTContext db = new QLCuocDTContext();
         public ThongTinHDDK(SIM ff,ThongtinSIM gg)
         {
 
@@ -38,8 +40,9 @@ namespace GD_NHANVIEN.GUI
         }
         internal void Change()
         {
-            
-            txtmakh.Text = MaKH;
+            int a = Convert.ToInt32(MaKH);
+            txtmakh.Text = db.KhachHangs.Where(s => s.KhachHangID == a).Select(s => s.TenKH).FirstOrDefault().ToString();
+           
         }
         
         
@@ -141,7 +144,7 @@ namespace GD_NHANVIEN.GUI
                     if (cbngaydk.Checked == true)
                         b = "True";
                     else b = "False";
-                    var res = dal.TimHDDK(txtmakh.Text, b, ngaydky.Value.ToString("yyyy/MM/dd"), txtchiphidk.Text, a);
+                    var res = dal.TimHDDK(MaKH, b, ngaydky.Value.ToString("yyyy/MM/dd"), txtchiphidk.Text, a);
                     hoaDonDangKiesBindingSource.DataSource = res;
                     MessageBox.Show("Tìm kiếm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     ClearHD();

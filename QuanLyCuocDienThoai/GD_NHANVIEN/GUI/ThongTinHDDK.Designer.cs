@@ -65,7 +65,7 @@
             this.simpleButton6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton6.Appearance.Options.UseFont = true;
             this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton6.Location = new System.Drawing.Point(317, 114);
+            this.simpleButton6.Location = new System.Drawing.Point(369, 114);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(59, 31);
             this.simpleButton6.TabIndex = 71;
@@ -75,7 +75,7 @@
             // ttdky
             // 
             this.ttdky.AutoSize = true;
-            this.ttdky.Location = new System.Drawing.Point(554, 122);
+            this.ttdky.Location = new System.Drawing.Point(588, 123);
             this.ttdky.Name = "ttdky";
             this.ttdky.Size = new System.Drawing.Size(50, 17);
             this.ttdky.TabIndex = 69;
@@ -135,7 +135,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(434, 123);
+            this.label4.Location = new System.Drawing.Point(468, 124);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 13);
             this.label4.TabIndex = 59;
@@ -147,7 +147,7 @@
             this.txtmakh.Location = new System.Drawing.Point(207, 120);
             this.txtmakh.Name = "txtmakh";
             this.txtmakh.ReadOnly = true;
-            this.txtmakh.Size = new System.Drawing.Size(104, 21);
+            this.txtmakh.Size = new System.Drawing.Size(156, 21);
             this.txtmakh.TabIndex = 58;
             // 
             // label2
@@ -155,9 +155,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(118, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 57;
-            this.label2.Text = "ID Khách hàng";
+            this.label2.Text = "Khách hàng";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1

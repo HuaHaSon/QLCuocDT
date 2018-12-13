@@ -95,7 +95,7 @@ namespace GD_NHANVIEN.GUI
                 }               
                 else 
                 {
-                    if (dal.testexistsim(txtsosim.Text) == "Success")
+                    if (dal.testexistsim1(txtsosim.Text) == "Success")
                     {
                         if(dal.testexistidhd(Convert.ToInt32(txtidhd.Text))!= txtidhd.Text)
                         {
@@ -110,7 +110,7 @@ namespace GD_NHANVIEN.GUI
 
                         
                     }
-                    else if(dal.testexistsim(txtsosim.Text) == txtsosim.Text)
+                    else 
                     {
                         MessageBox.Show("Số SIM đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }                                          
@@ -146,7 +146,7 @@ namespace GD_NHANVIEN.GUI
                 }
                 else
                 {
-                    if (dal.testexistsim(txtsosim.Text) == "Success")
+                    if (dal.testexistsim(txtsosim.Text,SoSIM_SUA) == "Success")
                     {
                         if (dal.testexistidhd(Convert.ToInt32(txtidhd.Text)) == IDHDDK_SUA)
                         {
@@ -159,9 +159,8 @@ namespace GD_NHANVIEN.GUI
                             MessageBox.Show("Hóa đơn đăng ký đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
-
                     }
-                    else if (dal.testexistsim(txtsosim.Text) != SoSIM_SUA)
+                    else 
                     {
                         MessageBox.Show("Số SIM đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

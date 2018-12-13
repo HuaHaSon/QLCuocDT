@@ -33,12 +33,8 @@
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             this.txtidsim = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtcuoctb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtmakh = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,17 +43,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtthanhtien = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.bangdhtc = new DevExpress.XtraGrid.GridControl();
-            this.hoaDonTinhCuocsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colHoaDonTinhCuocID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colKhachHangID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSIMID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNgayHD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCuocThueBao = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colThanhTien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTongTien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFlag = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtidhd = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dtngay = new System.Windows.Forms.DateTimePicker();
@@ -68,8 +53,18 @@
             this.HDprintDocument1 = new System.Drawing.Printing.PrintDocument();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.bangdhtc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonTinhCuocsBindingSource)).BeginInit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.hoaDonTinhCuocThangsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colHoaDonTinhCuocThangID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSIMID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTienThueBao = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTienCuocSD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFlag = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colThangHD = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonTinhCuocThangsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +73,7 @@
             this.simpleButton7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton7.Appearance.Options.UseFont = true;
             this.simpleButton7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton7.Location = new System.Drawing.Point(302, 156);
+            this.simpleButton7.Location = new System.Drawing.Point(381, 111);
             this.simpleButton7.Name = "simpleButton7";
             this.simpleButton7.Size = new System.Drawing.Size(59, 31);
             this.simpleButton7.TabIndex = 75;
@@ -87,45 +82,21 @@
             // 
             // txtidsim
             // 
-            this.txtidsim.Location = new System.Drawing.Point(213, 162);
+            this.txtidsim.Location = new System.Drawing.Point(213, 117);
             this.txtidsim.Name = "txtidsim";
             this.txtidsim.ReadOnly = true;
-            this.txtidsim.Size = new System.Drawing.Size(83, 21);
+            this.txtidsim.Size = new System.Drawing.Size(160, 21);
             this.txtidsim.TabIndex = 73;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(124, 165);
+            this.label3.Location = new System.Drawing.Point(124, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 72;
-            this.label3.Text = "ID SIM";
+            this.label3.Text = "Số SIM";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // simpleButton6
-            // 
-            this.simpleButton6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton6.Appearance.Options.UseFont = true;
-            this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton6.Location = new System.Drawing.Point(302, 111);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(59, 31);
-            this.simpleButton6.TabIndex = 74;
-            this.simpleButton6.Text = "Chọn";
-            this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(67, 263);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(117, 45);
-            this.simpleButton1.TabIndex = 64;
-            this.simpleButton1.Text = "Tính Cước";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // txtcuoctb
             // 
@@ -144,24 +115,6 @@
             this.label5.TabIndex = 61;
             this.label5.Text = "Cước thuê bao";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtmakh
-            // 
-            this.txtmakh.Location = new System.Drawing.Point(214, 117);
-            this.txtmakh.Name = "txtmakh";
-            this.txtmakh.ReadOnly = true;
-            this.txtmakh.Size = new System.Drawing.Size(82, 21);
-            this.txtmakh.TabIndex = 59;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(125, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
-            this.label2.TabIndex = 58;
-            this.label2.Text = "ID Khách hàng";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
@@ -240,93 +193,6 @@
             this.label10.Text = "Thành tiền";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // bangdhtc
-            // 
-            this.bangdhtc.DataSource = this.hoaDonTinhCuocsBindingSource;
-            this.bangdhtc.Location = new System.Drawing.Point(11, 325);
-            this.bangdhtc.MainView = this.gridView1;
-            this.bangdhtc.Name = "bangdhtc";
-            this.bangdhtc.Size = new System.Drawing.Size(837, 170);
-            this.bangdhtc.TabIndex = 83;
-            this.bangdhtc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.bangdhtc.Click += new System.EventHandler(this.bangdhtc_Click);
-            // 
-            // hoaDonTinhCuocsBindingSource
-            // 
-            this.hoaDonTinhCuocsBindingSource.DataSource = typeof(Model.EFModel.HoaDonTinhCuoc);
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colHoaDonTinhCuocID,
-            this.colKhachHangID,
-            this.colSIMID,
-            this.colNgayHD,
-            this.colCuocThueBao,
-            this.colThanhTien,
-            this.colTongTien,
-            this.colFlag});
-            this.gridView1.GridControl = this.bangdhtc;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            // 
-            // colHoaDonTinhCuocID
-            // 
-            this.colHoaDonTinhCuocID.FieldName = "HoaDonTinhCuocID";
-            this.colHoaDonTinhCuocID.Name = "colHoaDonTinhCuocID";
-            this.colHoaDonTinhCuocID.Visible = true;
-            this.colHoaDonTinhCuocID.VisibleIndex = 0;
-            // 
-            // colKhachHangID
-            // 
-            this.colKhachHangID.FieldName = "KhachHangID";
-            this.colKhachHangID.Name = "colKhachHangID";
-            this.colKhachHangID.Visible = true;
-            this.colKhachHangID.VisibleIndex = 1;
-            // 
-            // colSIMID
-            // 
-            this.colSIMID.FieldName = "SIMID";
-            this.colSIMID.Name = "colSIMID";
-            this.colSIMID.Visible = true;
-            this.colSIMID.VisibleIndex = 2;
-            // 
-            // colNgayHD
-            // 
-            this.colNgayHD.FieldName = "NgayHD";
-            this.colNgayHD.Name = "colNgayHD";
-            this.colNgayHD.Visible = true;
-            this.colNgayHD.VisibleIndex = 3;
-            // 
-            // colCuocThueBao
-            // 
-            this.colCuocThueBao.FieldName = "CuocThueBao";
-            this.colCuocThueBao.Name = "colCuocThueBao";
-            this.colCuocThueBao.Visible = true;
-            this.colCuocThueBao.VisibleIndex = 4;
-            // 
-            // colThanhTien
-            // 
-            this.colThanhTien.FieldName = "ThanhTien";
-            this.colThanhTien.Name = "colThanhTien";
-            this.colThanhTien.Visible = true;
-            this.colThanhTien.VisibleIndex = 5;
-            // 
-            // colTongTien
-            // 
-            this.colTongTien.FieldName = "TongTien";
-            this.colTongTien.Name = "colTongTien";
-            this.colTongTien.Visible = true;
-            this.colTongTien.VisibleIndex = 6;
-            // 
-            // colFlag
-            // 
-            this.colFlag.FieldName = "Flag";
-            this.colFlag.Name = "colFlag";
-            this.colFlag.Visible = true;
-            this.colFlag.VisibleIndex = 7;
-            // 
             // txtidhd
             // 
             this.txtidhd.Location = new System.Drawing.Point(214, 72);
@@ -349,7 +215,7 @@
             // 
             this.dtngay.CustomFormat = "dd/MM/yyyy";
             this.dtngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtngay.Location = new System.Drawing.Point(213, 210);
+            this.dtngay.Location = new System.Drawing.Point(213, 161);
             this.dtngay.Name = "dtngay";
             this.dtngay.Size = new System.Drawing.Size(169, 21);
             this.dtngay.TabIndex = 69;
@@ -357,7 +223,7 @@
             // cbngay
             // 
             this.cbngay.AutoSize = true;
-            this.cbngay.Location = new System.Drawing.Point(115, 213);
+            this.cbngay.Location = new System.Drawing.Point(115, 164);
             this.cbngay.Name = "cbngay";
             this.cbngay.Size = new System.Drawing.Size(93, 17);
             this.cbngay.TabIndex = 86;
@@ -369,7 +235,7 @@
             this.simpleButton3.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(497, 263);
+            this.simpleButton3.Location = new System.Drawing.Point(256, 218);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(117, 45);
             this.simpleButton3.TabIndex = 66;
@@ -381,7 +247,7 @@
             this.simpleButton4.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(287, 263);
+            this.simpleButton4.Location = new System.Drawing.Point(46, 218);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(117, 45);
             this.simpleButton4.TabIndex = 67;
@@ -407,7 +273,7 @@
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(704, 507);
+            this.simpleButton2.Location = new System.Drawing.Point(704, 484);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(144, 38);
             this.simpleButton2.TabIndex = 87;
@@ -419,24 +285,108 @@
             this.simpleButton5.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton5.Appearance.Options.UseFont = true;
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(704, 263);
+            this.simpleButton5.Location = new System.Drawing.Point(463, 218);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(117, 45);
             this.simpleButton5.TabIndex = 88;
             this.simpleButton5.Text = "Gửi mail";
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(646, 218);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(202, 45);
+            this.simpleButton1.TabIndex = 89;
+            this.simpleButton1.Text = "Chi tiết hóa đơn";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.hoaDonTinhCuocThangsBindingSource;
+            this.gridControl1.Location = new System.Drawing.Point(33, 278);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(832, 200);
+            this.gridControl1.TabIndex = 90;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
+            // 
+            // hoaDonTinhCuocThangsBindingSource
+            // 
+            this.hoaDonTinhCuocThangsBindingSource.DataSource = typeof(Model.EFModel.HoaDonTinhCuocThang);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colHoaDonTinhCuocThangID,
+            this.colSIMID,
+            this.colTienThueBao,
+            this.colTienCuocSD,
+            this.colFlag,
+            this.colThangHD});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            // 
+            // colHoaDonTinhCuocThangID
+            // 
+            this.colHoaDonTinhCuocThangID.FieldName = "HoaDonTinhCuocThangID";
+            this.colHoaDonTinhCuocThangID.Name = "colHoaDonTinhCuocThangID";
+            this.colHoaDonTinhCuocThangID.Visible = true;
+            this.colHoaDonTinhCuocThangID.VisibleIndex = 0;
+            // 
+            // colSIMID
+            // 
+            this.colSIMID.FieldName = "SIMID";
+            this.colSIMID.Name = "colSIMID";
+            this.colSIMID.Visible = true;
+            this.colSIMID.VisibleIndex = 1;
+            // 
+            // colTienThueBao
+            // 
+            this.colTienThueBao.FieldName = "TienThueBao";
+            this.colTienThueBao.Name = "colTienThueBao";
+            this.colTienThueBao.Visible = true;
+            this.colTienThueBao.VisibleIndex = 2;
+            // 
+            // colTienCuocSD
+            // 
+            this.colTienCuocSD.FieldName = "TienCuocSD";
+            this.colTienCuocSD.Name = "colTienCuocSD";
+            this.colTienCuocSD.Visible = true;
+            this.colTienCuocSD.VisibleIndex = 3;
+            // 
+            // colFlag
+            // 
+            this.colFlag.FieldName = "Flag";
+            this.colFlag.Name = "colFlag";
+            this.colFlag.Visible = true;
+            this.colFlag.VisibleIndex = 4;
+            // 
+            // colThangHD
+            // 
+            this.colThangHD.FieldName = "ThangHD";
+            this.colThangHD.Name = "colThangHD";
+            this.colThangHD.Visible = true;
+            this.colThangHD.VisibleIndex = 5;
+            // 
             // HoaDonTC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 560);
+            this.ClientSize = new System.Drawing.Size(877, 553);
+            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.cbngay);
             this.Controls.Add(this.txtidhd);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.bangdhtc);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtthanhtien);
             this.Controls.Add(this.label10);
@@ -447,21 +397,17 @@
             this.Controls.Add(this.simpleButton7);
             this.Controls.Add(this.txtidsim);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.simpleButton6);
             this.Controls.Add(this.dtngay);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.simpleButton3);
-            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.txtcuoctb);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtmakh);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HoaDonTC";
             this.Text = "HoaDonTC";
-            ((System.ComponentModel.ISupportInitialize)(this.bangdhtc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonTinhCuocsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonTinhCuocThangsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -473,12 +419,8 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
         private System.Windows.Forms.TextBox txtidsim;
         private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.TextBox txtcuoctb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtmakh;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
@@ -487,17 +429,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtthanhtien;
         private System.Windows.Forms.Label label10;
-        private DevExpress.XtraGrid.GridControl bangdhtc;
-        private System.Windows.Forms.BindingSource hoaDonTinhCuocsBindingSource;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colHoaDonTinhCuocID;
-        private DevExpress.XtraGrid.Columns.GridColumn colKhachHangID;
-        private DevExpress.XtraGrid.Columns.GridColumn colSIMID;
-        private DevExpress.XtraGrid.Columns.GridColumn colNgayHD;
-        private DevExpress.XtraGrid.Columns.GridColumn colCuocThueBao;
-        private DevExpress.XtraGrid.Columns.GridColumn colThanhTien;
-        private DevExpress.XtraGrid.Columns.GridColumn colTongTien;
-        private DevExpress.XtraGrid.Columns.GridColumn colFlag;
         private System.Windows.Forms.TextBox txtidhd;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dtngay;
@@ -508,5 +439,15 @@
         private System.Drawing.Printing.PrintDocument HDprintDocument1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private System.Windows.Forms.BindingSource hoaDonTinhCuocThangsBindingSource;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colHoaDonTinhCuocThangID;
+        private DevExpress.XtraGrid.Columns.GridColumn colSIMID;
+        private DevExpress.XtraGrid.Columns.GridColumn colTienThueBao;
+        private DevExpress.XtraGrid.Columns.GridColumn colTienCuocSD;
+        private DevExpress.XtraGrid.Columns.GridColumn colFlag;
+        private DevExpress.XtraGrid.Columns.GridColumn colThangHD;
     }
 }

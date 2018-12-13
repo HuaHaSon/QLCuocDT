@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
 using GD_NHANVIEN.DAL;
+using Model.EFModel;
 namespace GD_NHANVIEN.GUI
 {
     public partial class DangKySIM : DevExpress.XtraEditors.XtraForm
     {
         public string MaKH = "";
+        QLCuocDTContext db = new QLCuocDTContext();
         public DangKySIM()
         {
             InitializeComponent();
@@ -34,7 +36,8 @@ namespace GD_NHANVIEN.GUI
         }
         internal void Change()
         {
-            txtmakh.Text = MaKH;
+            int a = Convert.ToInt32(MaKH);           
+            txtmakh.Text = db.KhachHangs.Where(s => s.KhachHangID == a).Select(s => s.TenKH).FirstOrDefault().ToString();
         }
         private void label4_Click(object sender, EventArgs e)
         {
@@ -107,7 +110,7 @@ namespace GD_NHANVIEN.GUI
                         a = "True";
                     else a = "False";
 
-                    dal.ThemHDDK(txtmakh.Text, ngaydk.Value.ToString("yyyy/MM/dd"), chidk.Text, a);
+                    dal.ThemHDDK(MaKH, ngaydk.Value.ToString("yyyy/MM/dd"), chidk.Text, a);
                     MessageBox.Show("Thêm hóa đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Clear();
                 }
@@ -137,7 +140,8 @@ namespace GD_NHANVIEN.GUI
                         string a = "";
                         if (tttt.Checked == true)
                             a = "True";
-                        a = "False";
+                        else
+                            a = "False";
                         dal.SuaHDDK(txtidhd.Text, ngaydk.Value.ToString("yyyy/MM/dd"), chidk.Text, a);
                         MessageBox.Show("Sửa hóa đơn "+txtidhd.Text+" thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         Clear();
@@ -200,7 +204,7 @@ namespace GD_NHANVIEN.GUI
                     if (cbngaydk.Checked == true)
                         b = "True";
                     else b = "False";
-                    var res=dal.TimHDDK(txtmakh.Text, b, ngaydk.Text, chidk.Text, a);
+                    var res=dal.TimHDDK(MaKH, b, ngaydk.Text, chidk.Text, a);
                     hoaDonDangKiesBindingSource1.DataSource = res;
                     MessageBox.Show("Tìm kiếm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         ClearHD();

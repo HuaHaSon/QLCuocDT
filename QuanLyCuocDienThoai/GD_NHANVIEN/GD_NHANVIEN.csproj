@@ -80,6 +80,12 @@
     <Compile Include="GUI\ChiTietHDTC.Designer.cs">
       <DependentUpon>ChiTietHDTC.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\CTCG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CTCG.Designer.cs">
+      <DependentUpon>CTCG.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DangKySIM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     <EmbeddedResource Include="GUI\ChiTietHDTC.resx">
       <DependentUpon>ChiTietHDTC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CTCG.resx">
+      <DependentUpon>CTCG.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangKySIM.resx">
       <DependentUpon>DangKySIM.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,7 +200,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

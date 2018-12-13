@@ -36,13 +36,20 @@ namespace GD_NHANVIEN.DAL
         {
             return db.SIMs.Where(s => s.Flag == true).ToList();
         }
-        public string testexistsim(string data)
+        public string testexistsim(string data,string data1)
         {
-            var res = db.SIMs.Where(s => s.Flag==true && s.SoSim==data).Select(s=>s.SoSim).FirstOrDefault();
+            var res = db.SIMs.Where(s => s.Flag==true && s.SoSim==data && s.SoSim!=data1).Select(s=>s.SoSim).FirstOrDefault();
             if (res == null)
                 return "Success";
             return res.ToString();
-        }        
+        }
+        public string testexistsim1(string data)
+        {
+            var res = db.SIMs.Where(s => s.Flag == true && s.SoSim == data).Select(s => s.SoSim).FirstOrDefault();
+            if (res == null)
+                return "Success";
+            return res.ToString();
+        }
         public string testexistidhd(int data)
         {
             var res = db.SIMs.Where(s => s.Flag==true && s.HoaDonDangKyID == data).Select(s => s.HoaDonDangKyID).FirstOrDefault();
@@ -65,8 +72,7 @@ namespace GD_NHANVIEN.DAL
             var res= Convert.ToInt32(idsim);       
             var search = db.SIMs.Where(s => s.Flag && s.SIMID == res).SingleOrDefault();
             search.TenSim = tensim;
-            search.SoSim = sosim;
-         
+            search.SoSim = sosim;        
             db.SaveChanges();
         }
         public void XoaSIM(string idsim)
@@ -92,14 +98,14 @@ namespace GD_NHANVIEN.DAL
                
             return res.ToList();
         }
-        public List<SIM> LoadSIMKH(int idmakh)
-        {
-            var res = (from a in db.SIMs
-                       join b in db.HoaDonDangKies on a.HoaDonDangKyID equals b.HoaDonDangKyID
-                       join c in db.KhachHangs on b.KhachHangID equals c.KhachHangID
-                       where a.Flag == true && c.KhachHangID == idmakh
-                       select a).ToList();
-            return res;
-        }
+        //public List<SIM> LoadSIMKH(int idmakh)
+        //{
+        //    var res = (from a in db.SIMs
+        //               join b in db.HoaDonDangKies on a.HoaDonDangKyID equals b.HoaDonDangKyID
+        //               join c in db.KhachHangs on b.KhachHangID equals c.KhachHangID
+        //               where a.Flag == true && c.KhachHangID == idmakh
+        //               select a).ToList();
+        //    return res;
+        //}
     }
 }

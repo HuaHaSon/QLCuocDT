@@ -154,7 +154,7 @@
             this.txtmakh.Location = new System.Drawing.Point(206, 104);
             this.txtmakh.Name = "txtmakh";
             this.txtmakh.ReadOnly = true;
-            this.txtmakh.Size = new System.Drawing.Size(82, 21);
+            this.txtmakh.Size = new System.Drawing.Size(141, 21);
             this.txtmakh.TabIndex = 36;
             // 
             // label2
@@ -162,9 +162,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(117, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 35;
-            this.label2.Text = "ID Khách hàng";
+            this.label2.Text = " Khách hàng";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
@@ -202,7 +202,7 @@
             this.simpleButton6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton6.Appearance.Options.UseFont = true;
             this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton6.Location = new System.Drawing.Point(294, 98);
+            this.simpleButton6.Location = new System.Drawing.Point(353, 98);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(59, 31);
             this.simpleButton6.TabIndex = 55;
@@ -214,7 +214,7 @@
             this.txtidhd.Location = new System.Drawing.Point(206, 59);
             this.txtidhd.Name = "txtidhd";
             this.txtidhd.ReadOnly = true;
-            this.txtidhd.Size = new System.Drawing.Size(82, 21);
+            this.txtidhd.Size = new System.Drawing.Size(111, 21);
             this.txtidhd.TabIndex = 57;
             // 
             // label3
