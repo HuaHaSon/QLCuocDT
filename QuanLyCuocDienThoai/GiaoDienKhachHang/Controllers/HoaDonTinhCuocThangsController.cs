@@ -45,7 +45,12 @@ namespace GiaoDienKhachHang.Controllers
             ViewBag.TienCuocGoi = tienCuocGoi.ToString("N0");
 
             var listID = hoaDonTinhCuocThangs.Select(m => m.HoaDonTinhCuocThangID);
-            ViewBag.ListChiTietHDTC = db.ChiTietHDTCs.Where(m => listID.Contains(m.HoaDonTinhCuocThangID));
+            var listChiTietHDTC = db.ChiTietHDTCs.Where(m => listID.Contains(m.HoaDonTinhCuocThangID)).OrderBy(m => m.NgayHD);
+            ViewBag.ListChiTietHDTC =listChiTietHDTC;
+
+            var listCTHDTCID = listChiTietHDTC.Select(m => m.ChiTietHDTCID).ToList();
+            var listChiTietCG = db.ChiTietCuocGois.Where(m => listCTHDTCID.Contains(m.ChiTietHDTCID));
+            ViewBag.ListChiTietCuocGoi = listChiTietCG;
 
             return View(hoaDonTinhCuocThangs);
         }
@@ -91,7 +96,11 @@ namespace GiaoDienKhachHang.Controllers
 
             var listID = hoaDonTinhCuocThangs.Select(m => m.HoaDonTinhCuocThangID);
             var listChiTietHDTC = db.ChiTietHDTCs.Where(m => listID.Contains(m.HoaDonTinhCuocThangID)).ToList();
-            ViewBag.ListChiTietHDTC = listChiTietHDTC;
+            var listCTHDTCID = listChiTietHDTC.Select(m => m.ChiTietHDTCID).ToList();
+            var listChiTietCG = db.ChiTietCuocGois.Where(m => listCTHDTCID.Contains(m.ChiTietHDTCID));
+
+            ViewBag.ListChiTietHDTC = listChiTietHDTC.OrderBy(m => m.NgayHD);
+            ViewBag.ListChiTietCuocGoi = listChiTietCG;
 
             return View(hoaDonTinhCuocThangs.ToList());
         }

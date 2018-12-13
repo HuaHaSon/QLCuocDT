@@ -21,7 +21,7 @@ namespace Model.EFModel
 
         public int SoPhutSD { get; set; }
 
-        public int? ChiTietHDTCID { get; set; }
+        public int ChiTietHDTCID { get; set; }
 
         public bool Flag { get; set; }
 

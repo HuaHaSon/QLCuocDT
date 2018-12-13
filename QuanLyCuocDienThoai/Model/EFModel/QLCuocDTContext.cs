@@ -33,6 +33,11 @@ namespace Model.EFModel
                 .Property(e => e.ThanhTien)
                 .HasPrecision(18, 0);
 
+            modelBuilder.Entity<ChiTietHDTC>()
+                .HasMany(e => e.ChiTietCuocGois)
+                .WithRequired(e => e.ChiTietHDTC)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<GiaCuoc>()
                 .Property(e => e.GioBD)
                 .IsUnicode(false);
