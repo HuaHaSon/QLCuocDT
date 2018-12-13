@@ -13,7 +13,6 @@ namespace Model.EFModel
         public KhachHang()
         {
             HoaDonDangKies = new HashSet<HoaDonDangKy>();
-            HoaDonTinhCuocs = new HashSet<HoaDonTinhCuoc>();
         }
 
         public int KhachHangID { get; set; }
@@ -46,8 +45,5 @@ namespace Model.EFModel
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDonDangKy> HoaDonDangKies { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDonTinhCuoc> HoaDonTinhCuocs { get; set; }
     }
 }

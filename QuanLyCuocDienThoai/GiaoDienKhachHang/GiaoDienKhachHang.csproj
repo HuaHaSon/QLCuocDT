@@ -153,8 +153,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ChitietHDTCsController.cs" />
-    <Compile Include="Controllers\HoaDonTinhCuocsController.cs" />
+    <Compile Include="Controllers\HoaDonTinhCuocThangsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1400,12 +1399,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\HoaDonTinhCuocs\Index.cshtml" />
-    <Content Include="Views\ChitietHDTCs\Create.cshtml" />
-    <Content Include="Views\ChitietHDTCs\Delete.cshtml" />
-    <Content Include="Views\ChitietHDTCs\Details.cshtml" />
-    <Content Include="Views\ChitietHDTCs\Edit.cshtml" />
-    <Content Include="Views\ChitietHDTCs\Index.cshtml" />
+    <Content Include="Views\HoaDonTinhCuocThangs\Details.cshtml" />
+    <Content Include="Views\HoaDonTinhCuocThangs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

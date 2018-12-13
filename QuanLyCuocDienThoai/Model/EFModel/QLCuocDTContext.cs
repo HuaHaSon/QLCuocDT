@@ -12,17 +12,27 @@ namespace Model.EFModel
         {
         }
 
-        public virtual DbSet<ChitietHDTC> ChitietHDTCs { get; set; }
+        public virtual DbSet<ChiTietCuocGoi> ChiTietCuocGois { get; set; }
+        public virtual DbSet<ChiTietHDTC> ChiTietHDTCs { get; set; }
         public virtual DbSet<FileLogSIM> FileLogSIMs { get; set; }
         public virtual DbSet<GiaCuoc> GiaCuocs { get; set; }
         public virtual DbSet<HoaDonDangKy> HoaDonDangKies { get; set; }
-        public virtual DbSet<HoaDonTinhCuoc> HoaDonTinhCuocs { get; set; }
+        public virtual DbSet<HoaDonTinhCuocThang> HoaDonTinhCuocThangs { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<SIM> SIMs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<TienThueBao> TienThueBaos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ChiTietCuocGoi>()
+                .Property(e => e.ThanhTien)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<ChiTietHDTC>()
+                .Property(e => e.ThanhTien)
+                .HasPrecision(18, 0);
+
             modelBuilder.Entity<GiaCuoc>()
                 .Property(e => e.GioBD)
                 .IsUnicode(false);
@@ -36,13 +46,18 @@ namespace Model.EFModel
                 .WithRequired(e => e.HoaDonDangKy)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<HoaDonTinhCuoc>()
-                .Property(e => e.ThanhTien)
+            modelBuilder.Entity<HoaDonTinhCuocThang>()
+                .Property(e => e.TienThueBao)
                 .HasPrecision(18, 0);
 
-            modelBuilder.Entity<HoaDonTinhCuoc>()
-                .Property(e => e.TongTien)
+            modelBuilder.Entity<HoaDonTinhCuocThang>()
+                .Property(e => e.TienCuocSD)
                 .HasPrecision(18, 0);
+
+            modelBuilder.Entity<HoaDonTinhCuocThang>()
+                .HasMany(e => e.ChiTietHDTCs)
+                .WithRequired(e => e.HoaDonTinhCuocThang)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<KhachHang>()
                 .Property(e => e.CMND)
@@ -57,14 +72,18 @@ namespace Model.EFModel
                 .WithRequired(e => e.KhachHang)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<KhachHang>()
-                .HasMany(e => e.HoaDonTinhCuocs)
-                .WithRequired(e => e.KhachHang)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<SIM>()
                 .Property(e => e.SoSim)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<SIM>()
+                .HasMany(e => e.HoaDonTinhCuocThangs)
+                .WithRequired(e => e.SIM)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<TienThueBao>()
+                .Property(e => e.GiaTienThueBao)
+                .HasPrecision(18, 0);
         }
     }
 }

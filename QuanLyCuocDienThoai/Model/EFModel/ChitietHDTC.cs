@@ -6,25 +6,30 @@ namespace Model.EFModel
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ChitietHDTC")]
-    public partial class ChitietHDTC
+    [Table("ChiTietHDTC")]
+    public partial class ChiTietHDTC
     {
-        public int ChitietHDTCID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ChiTietHDTC()
+        {
+            ChiTietCuocGois = new HashSet<ChiTietCuocGoi>();
+        }
 
-        public int? SIMID { get; set; }
-
-        public DateTime? ThoiGianBD { get; set; }
-
-        public DateTime? ThoiGianKT { get; set; }
+        public int ChiTietHDTCID { get; set; }
 
         public int SoPhutSD { get; set; }
 
-        public int? HoaDonTinhCuocID { get; set; }
+        public DateTime NgayHD { get; set; }
+
+        public int HoaDonTinhCuocThangID { get; set; }
+
+        public decimal ThanhTien { get; set; }
 
         public bool Flag { get; set; }
 
-        public virtual SIM SIM { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietCuocGoi> ChiTietCuocGois { get; set; }
 
-        public virtual HoaDonTinhCuoc HoaDonTinhCuoc { get; set; }
+        public virtual HoaDonTinhCuocThang HoaDonTinhCuocThang { get; set; }
     }
 }

@@ -81,33 +81,90 @@ namespace Common
 
         public static void addDatatoDB()
         {
-            List<FileLogSIM> listFileLog = db.FileLogSIMs.ToList();
-            List<FileLogSIM> listFileLogTemp = new List<FileLogSIM>(listFileLog.Count);
-            listFileLog.ForEach((item) => { listFileLogTemp.Add(new FileLogSIM() { FileLogSIMID=item.FileLogSIMID,SIMID=item.SIMID,ThoiGianBD=item.ThoiGianBD,ThoiGianKT=item.ThoiGianKT}); });
-            foreach (var item in listFileLogTemp)
-            {
-                item.ThoiGianBD = item.ThoiGianBD.Date;
-            }
+            //List<FileLogSIM> listFileLog = db.FileLogSIMs.ToList();
+            //List<FileLogSIM> listFileLogTemp = new List<FileLogSIM>(listFileLog.Count);
+            //listFileLog.ForEach((item) => { listFileLogTemp.Add(new FileLogSIM() { FileLogSIMID=item.FileLogSIMID,SIMID=item.SIMID,ThoiGianBD=item.ThoiGianBD,ThoiGianKT=item.ThoiGianKT}); });
+            //foreach (var item in listFileLogTemp)
+            //{
+            //    item.ThoiGianBD = item.ThoiGianBD.Date;
+            //}
+            //var listDate = listFileLogTemp.Select(m => new { m.SIMID, m.ThoiGianBD }).Distinct().ToList();
 
-            var listDate = listFileLogTemp.Select(m => new { m.SIMID,m.ThoiGianBD}).Distinct().ToList();
-            foreach(var item in listDate)
+            //List<FileLogSIM> listFileLogTemp2 = new List<FileLogSIM>(listFileLog.Count);
+            //listFileLog.ForEach((item) => { listFileLogTemp.Add(new FileLogSIM() { FileLogSIMID = item.FileLogSIMID, SIMID = item.SIMID, ThoiGianBD = item.ThoiGianBD, ThoiGianKT = item.ThoiGianKT }); });
+            //foreach (var item in listFileLogTemp2)
+            //{
+            //    item.ThoiGianBD = new DateTime(item.ThoiGianBD.Year, item.ThoiGianBD.Month, 1);
+            //}
+            //var listMonth= listFileLogTemp2.Select(m => new { m.SIMID, m.ThoiGianBD }).Distinct().ToList();
+
+            //foreach(var item in listMonth)
+            //{
+            //    HoaDonTinhCuocThang hdtct = new HoaDonTinhCuocThang() { TienThueBao = 50000,ThangHD=item.ThoiGianBD,TienCuocSD=0 };
+            //    db.HoaDonTinhCuocThangs.Add(hdtct);
+            //    db.SaveChanges();
+            //}
+
+
+            //foreach (var item in listDate)
+            //{
+            //    var modelHDTCT = db.HoaDonTinhCuocThangs.Where(m => m.ThangHD == new DateTime(item.ThoiGianBD.Year, item.ThoiGianBD.Month, 1)).FirstOrDefault();
+            //    ChiTietHDTC cthdtc=new ChiTietHDTC() { NgayHD = item.ThoiGianBD,SoPhutSD=0,  ThanhTien = 0, HoaDonTinhCuocThangID= modelHDTCT.HoaDonTinhCuocThangID, Flag = true };
+            //    db.ChiTietHDTCs.Add(cthdtc);
+            //    db.SaveChanges();
+            //    var listFileLogReal = listFileLogTemp.Where(m=> m.ThoiGianBD==item.ThoiGianBD).ToList();
+            //    foreach(var item1 in listFileLogReal)
+            //    {
+            //        item1.ThoiGianBD = listFileLog.Where(m => m.FileLogSIMID == item1.FileLogSIMID).Select(m => m.ThoiGianBD).FirstOrDefault();
+            //    }
+            //    foreach(var item1 in listFileLogReal)
+            //    {
+            //        var ctcg = new ChiTietCuocGoi() { SIMID = item1.SIMID, ThoiGianBD = item1.ThoiGianBD, ThoiGianKT = item1.ThoiGianKT, SoPhutSD =  item1.ThoiGianKT.Subtract(item1.ThoiGianBD).Hours*60 + item1.ThoiGianKT.Subtract(item1.ThoiGianBD).Minutes , ChiTietHDTCID=cthdtc.ChiTietHDTCID,ThanhTien= MathSolve.TinhTienCuoc(item1.ThoiGianBD, item1.ThoiGianKT), Flag=true };
+            //        db.ChiTietCuocGois.Add(ctcg);
+            //        cthdtc.ThanhTien = cthdtc.ThanhTien + ctcg.ThanhTien;
+            //        cthdtc.SoPhutSD = cthdtc.SoPhutSD + ctcg.SoPhutSD;
+            //    }
+            //    modelHDTCT.TienCuocSD = modelHDTCT.TienCuocSD + cthdtc.ThanhTien;
+            //}
+            //db.SaveChanges();
+            List<FileLogSIM> listFileLog = db.FileLogSIMs.ToList();
+            foreach(var item in listFileLog)
             {
-                HoaDonTinhCuoc hdtc=new HoaDonTinhCuoc() { KhachHangID = db.SIMs.Find(item.SIMID).HoaDonDangKy.KhachHangID, SIMID = item.SIMID, NgayHD = item.ThoiGianBD, CuocThueBao = 50000, ThanhTien = 0, TongTien = 50000, Flag = true };
-                db.HoaDonTinhCuocs.Add(hdtc);
+                var thang = new DateTime(item.ThoiGianBD.Year, item.ThoiGianBD.Month, 1);
+                HoaDonTinhCuocThang hoadonTCT = db.HoaDonTinhCuocThangs.Where(m => m.SIMID == item.SIMID & m.ThangHD == thang).FirstOrDefault();
+                if (hoadonTCT == null)
+                {
+                    hoadonTCT = new HoaDonTinhCuocThang() { TienThueBao = db.TienThueBaos.OrderByDescending(m => m.TienThueBaoID).Select(m => m.GiaTienThueBao).FirstOrDefault(), TienCuocSD = MathSolve.TinhTienCuoc(item.ThoiGianBD, item.ThoiGianKT),SIMID=item.SIMID, ThangHD = thang,Flag=false };
+                    db.HoaDonTinhCuocThangs.Add(hoadonTCT);
+                }
+                else
+                {
+                    hoadonTCT.TienCuocSD += MathSolve.TinhTienCuoc(item.ThoiGianBD, item.ThoiGianKT);
+                }
                 db.SaveChanges();
-                var listFileLogReal = listFileLogTemp.Where(m => m.SIMID == hdtc.SIMID & m.ThoiGianBD==item.ThoiGianBD).ToList();
-                foreach(var item1 in listFileLogReal)
+
+
+                var ngay = item.ThoiGianBD.Date;
+                ChiTietHDTC chitietHDTC = db.ChiTietHDTCs.Where(m => m.NgayHD == ngay&m.HoaDonTinhCuocThang.SIMID==hoadonTCT.SIMID).FirstOrDefault();
+                if (chitietHDTC == null)
                 {
-                    item1.ThoiGianBD = listFileLog.Where(m => m.FileLogSIMID == item1.FileLogSIMID).Select(m => m.ThoiGianBD).FirstOrDefault();
+                    chitietHDTC = new ChiTietHDTC() { SoPhutSD = item.ThoiGianKT.Subtract(item.ThoiGianBD).Hours * 60 + item.ThoiGianKT.Subtract(item.ThoiGianBD).Minutes, NgayHD = ngay, ThanhTien = MathSolve.TinhTienCuoc(item.ThoiGianBD, item.ThoiGianKT),HoaDonTinhCuocThangID=hoadonTCT.HoaDonTinhCuocThangID };
+                    db.ChiTietHDTCs.Add(chitietHDTC);
                 }
-                foreach(var item1 in listFileLogReal)
+                else
                 {
-                    var cthdtc = new ChitietHDTC() { SIMID = item1.SIMID, ThoiGianBD = item1.ThoiGianBD, ThoiGianKT = item1.ThoiGianKT, SoPhutSD =  item1.ThoiGianKT.Subtract(item1.ThoiGianBD).Hours*60 + item1.ThoiGianKT.Subtract(item1.ThoiGianBD).Minutes , HoaDonTinhCuocID=hdtc.HoaDonTinhCuocID,Flag=true };
-                    db.ChitietHDTCs.Add(cthdtc);
+                    chitietHDTC.SoPhutSD += item.ThoiGianKT.Subtract(item.ThoiGianBD).Hours * 60 + item.ThoiGianKT.Subtract(item.ThoiGianBD).Minutes;
+                    chitietHDTC.ThanhTien += MathSolve.TinhTienCuoc(item.ThoiGianBD, item.ThoiGianKT);
                 }
+                db.SaveChanges();
+
+                ChiTietCuocGoi chitietCG = new ChiTietCuocGoi() { SIMID = item.SIMID, ThoiGianBD = item.ThoiGianBD, ThoiGianKT = item.ThoiGianKT, SoPhutSD = item.ThoiGianKT.Subtract(item.ThoiGianBD).Hours * 60 + item.ThoiGianKT.Subtract(item.ThoiGianBD).Minutes, ThanhTien = MathSolve.TinhTienCuoc(item.ThoiGianBD, item.ThoiGianKT),ChiTietHDTCID=chitietHDTC.ChiTietHDTCID, Flag = true };
+                db.ChiTietCuocGois.Add(chitietCG);
+                db.SaveChanges();
             }
             db.SaveChanges();
-        }
 
+        }
+         
     }
 }

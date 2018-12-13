@@ -12,7 +12,7 @@ namespace Model.Bus
         QLCuocDTContext db = new QLCuocDTContext();
         public int Login(string email, string passWord)
         {
-            var result = db.KhachHangs.SingleOrDefault(x => x.Email == email);
+            var result = db.KhachHangs.SingleOrDefault(x => x.Email == email&x.CMND==passWord);
             if (result == null)
             {
                 return -1;

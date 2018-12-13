@@ -12,8 +12,8 @@ namespace Model.EFModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SIM()
         {
-            ChitietHDTCs = new HashSet<ChitietHDTC>();
-            HoaDonTinhCuocs = new HashSet<HoaDonTinhCuoc>();
+            ChiTietCuocGois = new HashSet<ChiTietCuocGoi>();
+            HoaDonTinhCuocThangs = new HashSet<HoaDonTinhCuocThang>();
         }
 
         public int SIMID { get; set; }
@@ -31,11 +31,11 @@ namespace Model.EFModel
         public bool Flag { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChitietHDTC> ChitietHDTCs { get; set; }
+        public virtual ICollection<ChiTietCuocGoi> ChiTietCuocGois { get; set; }
 
         public virtual HoaDonDangKy HoaDonDangKy { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDonTinhCuoc> HoaDonTinhCuocs { get; set; }
+        public virtual ICollection<HoaDonTinhCuocThang> HoaDonTinhCuocThangs { get; set; }
     }
 }

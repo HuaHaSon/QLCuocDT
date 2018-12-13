@@ -330,3 +330,4 @@ D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.cspro
 D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.csproj.CopyComplete
 D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.exe
 D:\Projects\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.pdb
+E:\ASP.NET MVC PROJECT\QLCuocDT\QuanLyCuocDienThoai\GD_NHANVIEN\obj\Debug\GD_NHANVIEN.GUI.GuiMail.resources

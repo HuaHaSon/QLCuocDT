@@ -51,16 +51,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bus\KhachHangBus.cs" />
-    <Compile Include="Bus\SIM.cs" />
-    <Compile Include="EFModel\ChitietHDTC.cs" />
+    <Compile Include="EFModel\ChiTietCuocGoi.cs" />
+    <Compile Include="EFModel\ChiTietHDTC.cs" />
     <Compile Include="EFModel\FileLogSIM.cs" />
     <Compile Include="EFModel\GiaCuoc.cs" />
     <Compile Include="EFModel\HoaDonDangKy.cs" />
-    <Compile Include="EFModel\HoaDonTinhCuoc.cs" />
+    <Compile Include="EFModel\HoaDonTinhCuocThang.cs" />
     <Compile Include="EFModel\KhachHang.cs" />
     <Compile Include="EFModel\QLCuocDTContext.cs" />
     <Compile Include="EFModel\SIM.cs" />
     <Compile Include="EFModel\sysdiagram.cs" />
+    <Compile Include="EFModel\TienThueBao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\LoginModel.cs" />
     <Compile Include="ViewModel\LoginSessionModel.cs" />

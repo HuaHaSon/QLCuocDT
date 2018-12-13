@@ -26,17 +26,18 @@ namespace GiaoDienKhachHang.Controllers
         {
             if (ModelState.IsValid)
             {
-                var dao = new KhachHangBus();
-                var result = dao.Login(model.Email, model.Password);
+                var bus = new KhachHangBus();
+                var result = bus.Login(model.Email, model.Password);
                 if (result == 1)
                 {
                     var userSession = new LoginSessionModel();
-                    userSession.UserName = db.KhachHangs.Where(m => m.Email == model.Email).Select(m => m.TenKH).FirstOrDefault();
+                    userSession.UserName = db.KhachHangs.Where(m => m.Email == model.Email&m.CMND==model.Password).Select(m => m.TenKH).FirstOrDefault();
                     userSession.Email = model.Email;
+                    userSession.CMND = model.Password;
                     int idKH = db.KhachHangs.Where(m => m.Email == model.Email).Select(m=>m.KhachHangID).FirstOrDefault();
                     Session["USER_SESSION"] = null;
                     Session.Add("USER_SESSION", userSession);
-                    return RedirectToAction("Index", "ChiTietHDTCs", new { id=idKH});
+                    return RedirectToAction("Index", "HoaDonTinhCuocThangs");
                 }
                 else if (result == 0)
                 {
@@ -52,6 +53,12 @@ namespace GiaoDienKhachHang.Controllers
                 }
             }
             return View(model);
+        }
+
+        public ActionResult Logout()
+        {
+            Session["USER_SESSION"] = null;
+            return RedirectToAction("Login", "Home");
         }
         
     }
